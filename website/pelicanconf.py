@@ -10,7 +10,7 @@ import os
 AUTHOR = u'Rie Kawauchi, Po-Jui Chiu, Armanda Lgr'
 SITENAME = u'Startup Funding Campaign Analysis'
 SITESUBTITLE = u'Template using the iPython notebook'
-GITHUB_REPOSITORY_URL = u'https://github.com/rkawauchi/data-analysis-template'
+GITHUB_REPOSITORY_URL = u'https://github.com/rkawauchi/SmartGoal'
 
 ###################################################
 # FINER WEBSITE CONF (Defaults should be okay)
