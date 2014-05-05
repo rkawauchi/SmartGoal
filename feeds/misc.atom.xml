@@ -1,6 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>SmartGoal</title><link href="https://rkawauchi.github.io/SmartGoal/" rel="alternate"></link><link href="https://rkawauchi.github.io/SmartGoal/feeds/misc.atom.xml" rel="self"></link><id>https://rkawauchi.github.io/SmartGoal/</id><updated>2014-03-04T00:00:00-08:00</updated><entry><title>Project Report</title><link href="https://rkawauchi.github.io/SmartGoal/nb4.html" rel="alternate"></link><updated>2014-03-04T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-04:SmartGoal/nb4.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="team-members-responsible-for-this-notebook"&gt;Team members responsible for this notebook:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: summarized the main purpose of the project&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Po Jui Chiu&lt;/strong&gt;: listed the action plans how we can achieve reach the goal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="SartGoal"&gt;SartGoal&lt;a class="anchor-link" href="#SartGoal"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Need-funds?-SmartGoal-helps-your-fund-raising-campaign-reach-the-goal."&gt;Need funds? SmartGoal helps your fund-raising campaign reach the goal.&lt;a class="anchor-link" href="#Need-funds?-SmartGoal-helps-your-fund-raising-campaign-reach-the-goal."&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[5]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IPython.display&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;
+&lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;./picture/logo.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
+    Out[5]:&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_pyout"&gt;
+
+
+&lt;img src="data:image/png;base64,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
+EH//2Q==
+"&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Motivation:"&gt;Motivation:&lt;a class="anchor-link" href="#Motivation:"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Are you &lt;strong&gt;raising funds&lt;/strong&gt; for your innovative ideas to develop a products?&lt;/p&gt;
+&lt;p&gt;Are you &lt;strong&gt;raising funds&lt;/strong&gt; for your daughter's soccer team's camping?&lt;/p&gt;
+&lt;p&gt;Inspired by the crowdfunding website, Indiegogo.com, we are interested in finding the best duration of the fund-raising campaings and correlation between the duration, industry the projects are in, and the fund-raising goals.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The motivation:&lt;/strong&gt; UC Berkeley is fortunate to have many successful entrepreneurs and innovative ideas that, data analysis of how innovative projects can maximize their fundraising goals can contribute to the Berkeley academic society, outside of the class project.&lt;/p&gt;
+&lt;p&gt;Especially in this crowdfunding era, this analysis aims to excelerate the contribution of innovative ideas to the world.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="Action-Plan:"&gt;Action Plan:&lt;a class="anchor-link" href="#Action-Plan:"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;DRAFT DRAFT&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In this notebook, you'll sumarize your finding for the class presentation.&lt;/p&gt;
 &lt;p&gt;The class presentation will use this notebook in slide mode, as I do during lecture time.&lt;/p&gt;
 &lt;p&gt;You'll need to download the following &lt;a href="https://github.com/fperez/nb-slideshow-template/archive/master.zip"&gt;zip file&lt;/a&gt;, unzip it, and run the following notebook &lt;code&gt;install-support.ipynb&lt;/code&gt; to install the slide capabilities.&lt;/p&gt;
@@ -18,16 +216,6 @@ pdflatex NB4_report.tex&lt;/code&gt;&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;p&gt;Be sure to include an introduction section motivating your visualizations, with a description of the substantive context and why it is interesting.&lt;/p&gt;
 &lt;p&gt;Cite the source of the data and any other references that you used in carrying out your project.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="team-members-responsible-for-this-notebook"&gt;Team members responsible for this notebook:&lt;/h2&gt;
-&lt;p&gt;List the team members contributing to this notebook, along with their responsabilities:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;team member 1 &lt;strong&gt;name&lt;/strong&gt;: team member 1 &lt;strong&gt;responsabilities&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;team member 2 &lt;strong&gt;name&lt;/strong&gt;: team member 2 &lt;strong&gt;responsabilities&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;etc.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I advise you to work at least in pairs for each project notebook, as you did for the homework assignments. Of course, all team members may participate to each notebook.&lt;/p&gt;
 &lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Analysis</title><link href="https://rkawauchi.github.io/SmartGoal/nb3.html" rel="alternate"></link><updated>2014-03-03T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-03:SmartGoal/nb3.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="team-member-responsible-for-this-notebook"&gt;Team member responsible for this notebook:&lt;/h2&gt;
