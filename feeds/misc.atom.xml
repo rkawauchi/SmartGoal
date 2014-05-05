@@ -49,9 +49,9 @@ pdflatex NB4_report.tex&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I advise you to work at least in pairs for each project notebook, as you did for the homework assignments. Of course, all team members may participate to each notebook.&lt;/p&gt;
 &lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Cleaning</title><link href="https://rkawauchi.github.io/SmartGoal/nb2.html" rel="alternate"></link><updated>2014-03-02T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-02:SmartGoal/nb2.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="team-members-responsible-for-this-notebook"&gt;Team members responsible for this notebook:&lt;/h2&gt;
+&lt;h2 id="team-member-responsible-for-this-notebook"&gt;Team member responsible for this notebook:&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: changed the data mode/class from characters to factors/numerics, removed unwanted characters and corrupted data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: changed the data mode/class from characters to factors/numerics, and removed unwanted characters and corrupted data&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -59,7 +59,7 @@ pdflatex NB4_report.tex&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;The data we downloaded from the &lt;em&gt;indiegogo.com&lt;/em&gt; website was faily clean enought that data cleaning was relatively simple. We were able to save the downloaded data into &lt;code&gt;csv&lt;/code&gt; format and it was easily uploaded to R.&lt;/p&gt;
+&lt;p&gt;The data we downloaded from the website &lt;em&gt;&amp;quot;indiegogo.com&amp;quot;&lt;/em&gt; was faily clean enought that the data cleaning was relatively simple. We were able to save the downloaded data into &lt;code&gt;csv&lt;/code&gt; format which was easily uploaded to R.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
@@ -75,7 +75,7 @@ In&amp;nbsp;[2]:
 
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;We first wanted to take a quick grance of data:&lt;/p&gt;
+&lt;p&gt;We first wanted to take a quick glance at the data:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
@@ -150,7 +150,7 @@ In&amp;nbsp;[22]:
 &lt;/div&gt;
 
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;We are interested in analysing only USD projects, hence we filtered in only projects that contain 'USD' at the end of amount_raised. The number of projects went down from 10,764 to 9,189.&lt;/p&gt;
+&lt;p&gt;We are interested in analysing the USD projects and we filtered in the projects in USD. The currency was indicated in the last three digits of amount_raised column containing 'USD'. The number of projects went down from 10,764 to 9,189.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
@@ -226,7 +226,7 @@ In&amp;nbsp;[23]:
 &lt;/div&gt;
 
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Our first goal is to give the best fund-raising champaigne duration in days. We quickly checked the maximum and minimum duration and found out that there were negative durations stored which are bugs:&lt;/p&gt;
+&lt;p&gt;Our first goal is to give the best fund-raising campaign duration in days for the project owner to reach the fund-raising goal. We quickly checked the maximum and minimum duration days and found out that there were negative durations stored:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
@@ -317,7 +317,7 @@ In&amp;nbsp;[30]:
 
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;We confirmed that the data was stored as dataframe. We decided to chenge the mode of each column as follows:&lt;/p&gt;
+&lt;p&gt;We confirmed that the data was stored as dataframe. We decided to change the mode of each column as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;location&lt;/strong&gt;: ignore for this analysis&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;category&lt;/strong&gt;: &lt;code&gt;character&lt;/code&gt; to &lt;code&gt;factor&lt;/code&gt;&lt;/li&gt;
