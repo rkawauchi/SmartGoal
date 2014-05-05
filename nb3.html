@@ -1720,7 +1720,7 @@ init_mathjax();
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Data Analysis"/>
             <meta property="og:url" content="https://rkawauchi.github.io/SmartGoal/nb3.html"/>
-            <meta property="og:description" content="Team member responsible for this notebook: Rie Kawauchi: Visualized the data and analyzed how to present the best fund-raising duration and logit model to predict the probability of reaching the fund-raising goals In [6]: %load_ext rmagic The rmagic extension is already loaded. To reload it, use: %reload_ext rmagic In [13 ..."/>
+            <meta property="og:description" content="Team member responsible for this notebook: Rie Kawauchi: Visualized the data and analyzed how to present the best fund-raising duration and logit model to predict the probability of reaching the fund-raising goals In [2]: %load_ext rmagic Data Analysis¶ In [3]: %%R load("./data/cleaned/indiegogo.rda") In [4]: %%R # decide ..."/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://rkawauchi.github.io/SmartGoal/theme/css/bootstrap.min.css" type="text/css"/>
@@ -1823,7 +1823,7 @@ SmartGoal            </a>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%</span><span class="k">load_ext</span> <span class="n">rmagic</span>
@@ -1832,28 +1832,15 @@ In&nbsp;[6]:
 </div>
 </div>
 
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-The rmagic extension is already loaded. To reload it, use:
-  %reload_ext rmagic
-
-</pre>
 </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Data-Analysis">Data Analysis<a class="anchor-link" href="#Data-Analysis">&#182;</a></h1>
 </div>
 
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[13]:
+In&nbsp;[3]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -1867,7 +1854,7 @@ In&nbsp;[13]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[22]:
+In&nbsp;[4]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -2142,7 +2129,7 @@ H7rrA7vn6XfVAAAAAElFTkSuQmCC
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[19]:
+In&nbsp;[5]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -2206,7 +2193,7 @@ In&nbsp;[19]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[21]:
+In&nbsp;[6]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -2739,7 +2726,7 @@ AAAAAElFTkSuQmCC
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[27]:
+In&nbsp;[7]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -3362,10 +3349,14 @@ AElFTkSuQmCC
 </div>
 
 </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Best-Fund-Raising-Campaigne-Duration">Best Fund-Raising Campaigne Duration<a class="anchor-link" href="#Best-Fund-Raising-Campaigne-Duration">&#182;</a></h1>
+</div>
+
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[28]:
+In&nbsp;[8]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -3412,11 +3403,11 @@ In&nbsp;[28]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[29]:
+In&nbsp;[9]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">bestDuration</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="s">&quot;Film&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">bestDuration</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="s">&quot;Film&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 
 <span class="c"># category to choose:</span>
 <span class="c"># [1] &quot;Film&quot;           &quot;Community&quot;      &quot;Music&quot;          &quot;Education&quot;     </span>
@@ -3438,6 +3429,19 @@ In&nbsp;[29]:
 <div class="vbox output_wrapper">
 <div class="output vbox">
 
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<pre>
+     Best Duration Most Picked Duration
+[1,] &quot;48&quot;          &quot;30&quot;                
+
+</pre>
+
+</div>
+</div>
 
 <div class="hbox output_area"><div class="prompt"></div>
 <div class="box-flex1 output_subarea output_display_data">
@@ -3772,6 +3776,29 @@ AElFTkSuQmCC
 
 </div>
 </div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Predictive-Analysis-for-Probability-of-Reading-the-Funding-Goal">Predictive Analysis for Probability of Reading the Funding Goal<a class="anchor-link" href="#Predictive-Analysis-for-Probability-of-Reading-the-Funding-Goal">&#182;</a></h1>
+</div>
+
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="c">### UNDER CONSTRUCTION ##</span>
+<span class="c"># turn the data into binary and fit to logit model:</span>
+<span class="n">nll</span> <span class="o">&lt;-</span> <span class="n">function</span><span class="p">(</span><span class="n">beta</span><span class="p">){</span>
+  <span class="n">beta</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span> <span class="n">ncol</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nrow</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span>
+  <span class="k">return</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">exp</span><span class="p">(</span><span class="n">dX</span> <span class="o">%*%</span> <span class="n">beta</span><span class="p">)))</span><span class="o">+</span> <span class="nb">sum</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="p">(</span><span class="n">dX</span> <span class="o">%*%</span> <span class="n">beta</span><span class="p">))))</span>
+<span class="p">}</span>
+</pre></div>
 
 </div>
 </div>
