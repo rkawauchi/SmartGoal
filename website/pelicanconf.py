@@ -7,9 +7,9 @@ import os
 # AUTHORSHIP AND WEBSITE INFO (Replace accordingly)
 ###################################################
 
-AUTHOR = u'Rie Kawauchi, Po-Jui Chiu, Armanda Lgr'
-SITENAME = u'Startup Funding Campaign Analysis'
-SITESUBTITLE = u'Template using the iPython notebook'
+AUTHOR = u'Rie Kawauchi, Po-Jui Chiu'
+SITENAME = u'SmartGoal'
+SITESUBTITLE = u'Reach your fund-raising campaign goal!'
 GITHUB_REPOSITORY_URL = u'https://github.com/rkawauchi/SmartGoal'
 
 ###################################################
