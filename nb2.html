@@ -1719,17 +1719,17 @@ init_mathjax();
     <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Data Cleaning"/>
-            <meta property="og:url" content="http://rkawauchi.github.io/SmartGoal/nb2.html"/>
-            <meta property="og:description" content="(Rie) Test to see if this page gets updated. In this notebook, you'll load the raw data into R or Pandas dataframe from the ./data/raw directory using the functions and classes (written during the data gathering phase) in the ./script directory perform visual exploration on your data variables ..."/>
+            <meta property="og:url" content="https://rkawauchi.github.io/SmartGoal/nb2.html"/>
+            <meta property="og:description" content="Team members responsible for this notebook: Rie Kawauchi: changed the data mode/class from characters to factors/numerics, removed unwanted characters and corrupted data Data Check¶ The data we downloaded from the indiegogo.com website was faily clean enought that data cleaning was relatively simple. We were able to save ..."/>
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://rkawauchi.github.io/SmartGoal/theme/css/bootstrap.min.css" type="text/css"/>
-    <link href="http://rkawauchi.github.io/SmartGoal/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://rkawauchi.github.io/SmartGoal/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="https://rkawauchi.github.io/SmartGoal/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://rkawauchi.github.io/SmartGoal/theme/css/pygments.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://rkawauchi.github.io/SmartGoal/theme/css/style.css" type="text/css"/>
+    <link href="https://rkawauchi.github.io/SmartGoal/theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://rkawauchi.github.io/SmartGoal/theme/css/style.css" type="text/css"/>
 
-        <link href="http://rkawauchi.github.io/SmartGoal/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="https://rkawauchi.github.io/SmartGoal/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Startup Funding Campaign Analysis ATOM Feed"/>
 
     
@@ -1766,7 +1766,7 @@ init_mathjax();
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://rkawauchi.github.io/SmartGoal/" class="navbar-brand">
+            <a href="https://rkawauchi.github.io/SmartGoal/" class="navbar-brand">
 Startup Funding Campaign Analysis            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -1777,7 +1777,7 @@ Startup Funding Campaign Analysis            </a>
                     <li><a href="nb1">Data Gathering</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://rkawauchi.github.io/SmartGoal/archives.html"><i class="fa fa-th-list"></i>Archives</a></li>
+                <li><a href="https://rkawauchi.github.io/SmartGoal/archives.html"><i class="fa fa-th-list"></i>Archives</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -1792,7 +1792,7 @@ Startup Funding Campaign Analysis            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://rkawauchi.github.io/SmartGoal/nb2.html"
+                    <a href="https://rkawauchi.github.io/SmartGoal/nb2.html"
                        rel="bookmark"
                        title="Permalink to Data Cleaning">
                         Data Cleaning
@@ -1815,43 +1815,54 @@ Startup Funding Campaign Analysis            </a>
                 </div>
                 <p>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><em>(Rie) Test to see if this page gets updated.</em></p>
-<p>In this notebook, you'll</p>
-<ul>
-<li><p><strong>load the raw data into R or Pandas dataframe</strong> from the <code>./data/raw</code> directory using the functions and classes (written during the data gathering phase) in the <code>./script</code> directory</p></li>
-<li><p><strong>perform visual exploration</strong> on your data variables to detect anomalies, errors, outliers, interesting features etc.</p></li>
-<li><p><strong>clean categorical and quantitative variables</strong> (by removing observations and variables with too many missing values, by consolidating categorical variables, by selecting an appropriate subset of variables and observations for later analysis, etc.)</p></li>
-<li><p><strong>save the cleaned data</strong> into csv files in the <code>./data/cleaned</code> directory</p></li>
-<li><p><strong>save interesting graphics</strong> you obtained during visual exploration into the <code>./visualiation</code> directory</p></li>
-</ul>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="team-members-responsible-for-this-notebook">Team members responsible for this notebook:</h2>
-<p>List the team members contributing to this notebook, along with their responsabilities:</p>
 <ul>
-<li>team member 1 <strong>name</strong>: team member 1 <strong>responsabilities</strong></li>
-<li>team member 2 <strong>name</strong>: team member 2 <strong>responsabilities</strong></li>
-<li>etc.</li>
+<li><strong>Rie Kawauchi</strong>: changed the data mode/class from characters to factors/numerics, removed unwanted characters and corrupted data</li>
 </ul>
-<p>I advise you to work at least in pairs for each project notebook, as you did for the homework assignments. Of course, all team members may participate to each notebook.</p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h2>
+<h1 id="Data-Check">Data Check<a class="anchor-link" href="#Data-Check">&#182;</a></h1>
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here I'll load the plant data in xml format into a R data frame using the</p>
-<pre><code>create_df_from_plant_xml(file)</code></pre>
-<p>function contained in the R script</p>
-<pre><code>    ./script/plant_df-R</code></pre>
+<p>The data we downloaded from the <em>indiegogo.com</em> website was faily clean enought that data cleaning was relatively simple. We were able to save the downloaded data into <code>csv</code> format and it was easily uploaded to R.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[4]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%</span><span class="k">load_ext</span> <span class="n">rmagic</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We first wanted to take a quick grance of data:</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[22]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="c">#source(&#39;./script/indiegogo.R&#39;)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s">&quot;./data/raw/indiegogo.csv&quot;</span><span class="p">)</span>
+
+<span class="c"># number of projects downloaded</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dim</span><span class="p">(</span><span class="n">data</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="c"># check class of data</span>
+<span class="k">print</span><span class="p">(</span><span class="n">class</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+<span class="c"># check overall data</span>
+<span class="k">print</span><span class="p">(</span><span class="n">head</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="n">mode</span><span class="o">.</span><span class="n">check</span> <span class="o">=</span> <span class="nb">apply</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mode</span><span class="o">.</span><span class="n">check</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -1862,12 +1873,33 @@ In&nbsp;[4]:
 
 
 <div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
+<div class="box-flex1 output_subarea output_display_data">
+
+
 <pre>
-The rmagic extension is already loaded. To reload it, use:
-  %reload_ext rmagic
+[1] 10764
+[1] &quot;data.frame&quot;
+                   location  category duration amount_raised amount_goal
+1       Brisbane, Australia    Health       60          0AUD     $2,500 
+2       Brisbane, Australia    Health       50          0AUD     $2,500 
+3        Marsden, Australia Education        7          0AUD     $2,000 
+4      Traralgon, Australia Community       60          0AUD     $2,000 
+5 Red Deer, Alberta, Canada     Music       60          0CAD    $21,000 
+6  Montreal, Quebec, Canada    Health       52          0CAD     $1,000 
+  percent
+1       0
+2       0
+3       0
+4       0
+5       0
+6       0
+     location      category      duration amount_raised   amount_goal 
+  &quot;character&quot;   &quot;character&quot;   &quot;character&quot;   &quot;character&quot;   &quot;character&quot; 
+      percent 
+  &quot;character&quot; 
 
 </pre>
+
 </div>
 </div>
 
@@ -1876,62 +1908,32 @@ The rmagic extension is already loaded. To reload it, use:
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To load the function into a R cell, one needs to use the</p>
-<pre><code>source(R_script_file)</code></pre>
-<p>command in R, which works in a similar way as the</p>
-<pre><code>import module</code></pre>
-<p>command in Python:</p>
+<h1 id="Data-Cleaning">Data Cleaning<a class="anchor-link" href="#Data-Cleaning">&#182;</a></h1>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Filter-Currency:">Filter Currency:<a class="anchor-link" href="#Filter-Currency:">&#182;</a></h2>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We are interested in analysing only USD projects, hence we filtered in only projects that contain 'USD' at the end of amount_raised. The number of projects went down from 10,764 to 9,189.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[23]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">source</span><span class="p">(</span><span class="s">&#39;./script/plant_df-R&#39;</span><span class="p">)</span>
-</pre></div>
+<span class="n">require</span><span class="p">(</span><span class="n">stringr</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">subset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">str_sub</span><span class="p">(</span><span class="n">data</span><span class="p">[,</span><span class="mi">4</span><span class="p">],</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s">&#39;USD&#39;</span><span class="p">)</span>
 
-</div>
-</div>
+<span class="c"># new number of projects filtered</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dim</span><span class="p">(</span><span class="n">data</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
 
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, we can create a data frame directly from the XML file using the functin contained in the scrip above.</p>
-<p>If you wish to perform the cleaning using Pandas data frames instead of R data frames, one make the R data frame available to Python cells by using the R magic command:</p>
-<pre><code>%%R -d df_name</code></pre>
-<p>To know more on how to pass variables back and forth between R and Python cells, please have a look at the notebook <a href="http://nbviewer.ipython.org/url/github.com/ipython/ipython/raw/master/examples/notebooks/R%20Magics.ipynb">here</a>.</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[7]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span> <span class="o">-</span><span class="n">d</span> <span class="n">data</span>
-
-<span class="n">library</span><span class="p">(</span><span class="n">XML</span><span class="p">)</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="n">create_df_from_plant_xml</span><span class="p">(</span><span class="s">&#39;./data/raw/plant.xml&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now let's load our data into a Pandas data frame:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[8]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="c">#check to see if the data only contain USD projects</span>
+<span class="k">print</span><span class="p">(</span><span class="n">head</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">tail</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -1941,74 +1943,42 @@ In&nbsp;[8]:
 <div class="output vbox">
 
 
-<div class="hbox output_area"><div class="prompt output_prompt">
-    Out[8]:</div>
-<div class="box-flex1 output_subarea output_pyout">
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
 
-<div class="output_html rendered_html">
-<div style="max-height:1000px;max-width:1500px;overflow:auto;">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>COMMON</th>
-      <th>BOTANICAL</th>
-      <th>ZONE</th>
-      <th>LIGHT</th>
-      <th>PRICE</th>
-      <th>AVAILABILITY</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>           Bloodroot</td>
-      <td> Sanguinaria canadensis</td>
-      <td> 4</td>
-      <td> Mostly Shady</td>
-      <td> $2.44</td>
-      <td> 031599</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>           Columbine</td>
-      <td>   Aquilegia canadensis</td>
-      <td> 3</td>
-      <td> Mostly Shady</td>
-      <td> $9.37</td>
-      <td> 030699</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>      Marsh Marigold</td>
-      <td>       Caltha palustris</td>
-      <td> 4</td>
-      <td> Mostly Sunny</td>
-      <td> $6.81</td>
-      <td> 051799</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>             Cowslip</td>
-      <td>       Caltha palustris</td>
-      <td> 4</td>
-      <td> Mostly Shady</td>
-      <td> $9.90</td>
-      <td> 030699</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td> Dutchman's-Breeches</td>
-      <td>    Dicentra cucullaria</td>
-      <td> 3</td>
-      <td> Mostly Shady</td>
-      <td> $6.44</td>
-      <td> 012099</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
+
+<pre>
+[1] 9189
+                                 location    category duration amount_raised
+92                     Bucharest, Romania     Animals       60          0USD
+93                    Kamalasai, Thailand Video / Web       60          0USD
+94           Sebago, Maine, United States     Writing       45          0USD
+95 Los Angeles, California, United States        Film       35          0USD
+96     St. Paul, Minnesota, United States Environment       60          0USD
+97           Cabanatuan City, Philippines        Food       60          0USD
+   amount_goal percent
+92    $32,000        0
+93    $35,000        0
+94     $6,000        0
+95     $3,500        0
+96    $60,000        0
+97     $2,700        0
+                                    location   category duration amount_raised
+10758               Toronto, Ontario, Canada Technology       34      42549USD
+10759 New York City, New York, United States  Community       16     100051USD
+10761        Greece, New York, United States  Community       30     703168USD
+10762   San Diego, California, United States    Fashion       20      71409USD
+10763  Sacramento, California, United States Technology       30     103527USD
+10764                         Chennai, India Technology       15     104481USD
+      amount_goal percent
+10758       $500     8510
+10759     $1,000    10005
+10761     $5,000    14063
+10762       $500    14282
+10763       $500    20705
+10764       $500    20896
+
+</pre>
 
 </div>
 </div>
@@ -2018,33 +1988,194 @@ In&nbsp;[8]:
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The actual data cleaning can now begins!</p>
+<h1 id="Filter-Anomalities:">Filter Anomalities:<a class="anchor-link" href="#Filter-Anomalities:">&#182;</a></h1>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Our first goal is to give the best fund-raising champaigne duration in days. We quickly checked the maximum and minimum duration and found out that there were negative durations stored which are bugs:</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[26]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">[,</span><span class="mi">3</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">[,</span><span class="mi">3</span><span class="p">]))</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<pre>
+[1] 215
+[1] -353
+
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The function was created to remove the negative duration if any. This cleaning further reduced the number of projects from 9,189 to 8,584.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[30]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="n">durationClean</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">data</span><span class="p">){</span>
+  <span class="n">du</span> <span class="o">=</span> <span class="n">data</span><span class="p">[,</span><span class="mi">3</span><span class="p">]</span>
+  <span class="n">duCheck</span> <span class="o">=</span> <span class="n">nrow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">(</span><span class="n">du</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">,])</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">duCheck</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="n">duCheck</span><span class="p">){</span>
+      <span class="n">count</span> <span class="o">=</span> <span class="n">i</span>
+      <span class="n">badRow</span> <span class="o">=</span> <span class="n">which</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">data</span><span class="p">[,</span><span class="mi">3</span><span class="p">])</span>
+      <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="n">badRow</span><span class="p">,,</span><span class="n">drop</span><span class="o">=</span><span class="n">FALSE</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">durationClean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">[,</span><span class="mi">3</span><span class="p">]))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dim</span><span class="p">(</span><span class="n">data</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<pre>
+[1] 1
+[1] 8584
+
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We confirmed that the data was stored as dataframe. We decided to chenge the mode of each column as follows:</p>
+<ul>
+<li><strong>location</strong>: ignore for this analysis</li>
+<li><strong>category</strong>: <code>character</code> to <code>factor</code></li>
+<li><strong>duration</strong>: <code>character</code> to <code>numeric</code></li>
+<li><strong>amount_raised</strong>:<code>character</code> to <code>numeric</code></li>
+<li><strong>amount_goal</strong>: <code>character</code> to <code>numeric</code></li>
+<li><strong>percent</strong>: <code>character</code> to <code>numeric</code></li>
+</ul>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[36]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="c"># remove unwanted characters to be read as numeric</span>
+<span class="n">data</span><span class="p">[,</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">(</span><span class="s">&#39;USD$&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[,</span><span class="mi">4</span><span class="p">])</span>
+<span class="n">data</span><span class="p">[,</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\\</span><span class="s">$&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">data</span><span class="p">[,</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\\</span><span class="s">,&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[,</span><span class="mi">5</span><span class="p">])</span> <span class="c"># do this twice</span>
+<span class="n">data</span><span class="p">[,</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\\</span><span class="s">,&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">data</span><span class="p">[,</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\\</span><span class="s">,&#39;</span><span class="p">,</span> <span class="s">&#39;&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[,</span><span class="mi">6</span><span class="p">])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">tail</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<pre>
+                                   location   category duration amount_raised
+8579               Toronto, Ontario, Canada Technology       34         42549
+8580 New York City, New York, United States  Community       16        100051
+8581        Greece, New York, United States  Community       30        703168
+8582   San Diego, California, United States    Fashion       20         71409
+8583  Sacramento, California, United States Technology       30        103527
+8584                         Chennai, India Technology       15        104481
+     amount_goal percent
+8579         500    8510
+8580        1000   10005
+8581        5000   14063
+8582         500   14282
+8583         500   20705
+8584         500   20896
+
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Change-Mode-and-Save:">Change Mode and Save:<a class="anchor-link" href="#Change-Mode-and-Save:">&#182;</a></h1>
+</div>
+
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[38]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="c"># make a new data-frame with desired mode</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="s">&quot;location&quot;</span><span class="o">=</span><span class="n">data</span><span class="p">[,</span><span class="mi">1</span><span class="p">],</span><span class="s">&quot;category&quot;</span><span class="o">=</span><span class="n">data</span><span class="p">[,</span><span class="mi">2</span><span class="p">],</span><span class="s">&quot;duration&quot;</span><span class="o">=</span><span class="n">data</span><span class="p">[,</span><span class="mi">3</span><span class="p">],</span><span class="s">&quot;amount_raised&quot;</span><span class="o">=</span><span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">(</span><span class="n">data</span><span class="p">[,</span><span class="mi">4</span><span class="p">]),</span>
+                  <span class="s">&quot;amount_goal&quot;</span><span class="o">=</span><span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">(</span><span class="n">data</span><span class="p">[,</span><span class="mi">5</span><span class="p">]),</span><span class="s">&quot;percent&quot;</span><span class="o">=</span><span class="k">as</span><span class="o">.</span><span class="n">numeric</span><span class="p">(</span><span class="n">data</span><span class="p">[,</span><span class="mi">6</span><span class="p">]))</span>
+
+<span class="c"># save the cleaned data</span>
+<span class="n">save</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="nb">file</span><span class="o">=</span><span class="s">&#39;./data/cleaned/indiegogo.rda&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb">
-</pre></div>
-
-</div>
-</div>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p><strong>perform visual exploration</strong> on your data variables to detect anomalies, errors, outliers, interesting features etc.</p></li>
+<li><p><strong>clean categorical and quantitative variables</strong> (by removing observations and variables with too many missing values, by consolidating categorical variables, by selecting an appropriate subset of variables and observations for later analysis, etc.)</p></li>
+<li><p><strong>save the cleaned data</strong> into csv files in the <code>./data/cleaned</code> directory</p></li>
+<li><p><strong>save interesting graphics</strong> you obtained during visual exploration into the <code>./visualiation</code> directory</p></li>
+</ul>
 </div></p>
             </div>
             <!-- /.entry-content -->
@@ -2111,10 +2242,10 @@ In&nbsp;[]:
 <script src="http://code.jquery.com/jquery.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://rkawauchi.github.io/SmartGoal/theme/js/bootstrap.min.js"></script>
+<script src="https://rkawauchi.github.io/SmartGoal/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://rkawauchi.github.io/SmartGoal/theme/js/respond.min.js"></script>
+<script src="https://rkawauchi.github.io/SmartGoal/theme/js/respond.min.js"></script>
 
 </body>
 </html>
