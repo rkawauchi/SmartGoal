@@ -49,6 +49,7 @@ pdflatex NB4_report.tex&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;I advise you to work at least in pairs for each project notebook, as you did for the homework assignments. Of course, all team members may participate to each notebook.&lt;/p&gt;
 &lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Cleaning</title><link href="http://rkawauchi.github.io/SmartGoal/nb2.html" rel="alternate"></link><updated>2014-03-02T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-02:SmartGoal/nb2.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;em&gt;(Rie) Test to see if this page gets updated.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;In this notebook, you'll&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;load the raw data into R or Pandas dataframe&lt;/strong&gt; from the &lt;code&gt;./data/raw&lt;/code&gt; directory using the functions and classes (written during the data gathering phase) in the &lt;code&gt;./script&lt;/code&gt; directory&lt;/p&gt;&lt;/li&gt;
