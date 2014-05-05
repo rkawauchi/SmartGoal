@@ -1720,7 +1720,7 @@ init_mathjax();
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Data Gathering"/>
             <meta property="og:url" content="https://rkawauchi.github.io/SmartGoal/nb1.html"/>
-            <meta property="og:description" content="In this notebook, you'll create the directory structure for your project download the raw data for your project write functions and classes to transform raw data (e.g in XML, jason, etc.) into data frames explain what your are doing Team members responsible for this notebook: List the team ..."/>
+            <meta property="og:description" content="In []: import requests import json import codecs from datetime import datetime from bs4 import BeautifulSoup def parse_page(link): data_dict = {} response = requests.get(link) if response.status_code != 200: print 'Error for link: {0}'.format(link) return data_dict html = response.content soup = BeautifulSoup(html) # location span_element = soup.findAll('span', {'class': 'i-keep-it-together'}) if ..."/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://rkawauchi.github.io/SmartGoal/theme/css/bootstrap.min.css" type="text/css"/>
@@ -1814,6 +1814,118 @@ SmartGoal            </a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">codecs</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">def</span> <span class="nf">parse_page</span><span class="p">(</span><span class="n">link</span><span class="p">):</span>
+    <span class="n">data_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&#39;Error for link: {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data_dict</span>
+
+    <span class="n">html</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+    <span class="c"># location</span>
+    <span class="n">span_element</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">&#39;span&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;i-keep-it-together&#39;</span><span class="p">})</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">span_element</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">location</span> <span class="o">=</span> <span class="n">span_element</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">location</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;None&#39;</span>
+
+    <span class="c"># category</span>
+    <span class="n">span_element</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">&#39;span&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;i-keep-it-together&#39;</span><span class="p">})</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">span_element</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">category</span> <span class="o">=</span> <span class="n">span_element</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;category&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">category</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">span_element</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">category</span> <span class="o">=</span> <span class="n">span_element</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;category&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">category</span>
+
+    <span class="c"># funding duration</span>
+    <span class="n">div_element</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;div&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;i-time-left&#39;</span><span class="p">})</span>
+    <span class="k">if</span> <span class="n">div_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;?&#39;</span><span class="p">:</span>
+        <span class="n">data_dict</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">return</span> <span class="n">data_dict</span>
+
+    <span class="k">elif</span> <span class="nb">int</span><span class="p">(</span><span class="n">div_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">paragraph</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;div&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;i-funding-duration&#39;</span><span class="p">})</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="mi">25</span>
+        <span class="n">dates</span> <span class="o">=</span> <span class="n">paragraph</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="n">index</span><span class="p">:]</span>
+        
+        <span class="n">start_date</span> <span class="o">=</span> <span class="s">&#39;{0},{1},{2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">7</span><span class="p">])</span>
+        <span class="n">end_date</span> <span class="o">=</span> <span class="s">&#39;{0},{1},{2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">5</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">6</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">7</span><span class="p">])</span>
+         
+        <span class="n">before</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="s">&#39;%b,</span><span class="si">%d</span><span class="s">,%Y&#39;</span><span class="p">)</span>
+        <span class="n">after</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">end_date</span><span class="p">,</span> <span class="s">&#39;%B,</span><span class="si">%d</span><span class="s">,%Y&#39;</span><span class="p">)</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">after</span> <span class="o">-</span> <span class="n">before</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">days</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">days</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">paragraph</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;div&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;i-funding-duration&#39;</span><span class="p">})</span>
+        <span class="n">index</span> <span class="o">=</span> <span class="mi">25</span>
+        <span class="n">dates</span> <span class="o">=</span> <span class="n">paragraph</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="n">index</span><span class="p">:]</span>
+        
+        <span class="n">start_date</span> <span class="o">=</span> <span class="s">&#39;{0},{1},{2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">8</span><span class="p">])</span>
+        <span class="n">end_date</span> <span class="o">=</span> <span class="s">&#39;{0},{1},{2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">6</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">7</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">8</span><span class="p">])</span>
+         
+        <span class="n">before</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="s">&#39;%b,</span><span class="si">%d</span><span class="s">,%Y&#39;</span><span class="p">)</span>
+        <span class="n">after</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">end_date</span><span class="p">,</span> <span class="s">&#39;%B,</span><span class="si">%d</span><span class="s">,%Y&#39;</span><span class="p">)</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">after</span> <span class="o">-</span> <span class="n">before</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">days</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">days</span>
+
+    <span class="c"># amount raised</span>
+    <span class="n">span_element</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;span&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;currency currency-xlarge&#39;</span><span class="p">})</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">span_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">money_string</span> <span class="o">=</span> <span class="n">span_element</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">money_string</span> <span class="o">=</span> <span class="n">span_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span><span class="o">+</span><span class="n">span_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c">#money = &#39;&#39;</span>
+    <span class="c">#for character in money_string:</span>
+    <span class="c">#    if character.isdigit():</span>
+    <span class="c">#        money = money + character</span>
+    <span class="c">#money = int(money)</span>
+    <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;amount_raised&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">money_string</span>
+    
+    <span class="c"># goal of raising</span>
+    <span class="n">span_element</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;div&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span><span class="s">&#39;i-raised&#39;</span><span class="p">})</span>
+    <span class="n">money_string</span> <span class="o">=</span> <span class="n">span_element</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="mi">10</span><span class="p">:]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;raising_goal&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">money_string</span> 
+    
+    <span class="c"># completion level</span>
+    <span class="n">span_element</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;div&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span><span class="s">&#39;i-percent&#39;</span><span class="p">})</span>
+    <span class="n">percent_string</span> <span class="o">=</span> <span class="n">span_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()[</span><span class="o">-</span><span class="mi">10</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;percent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">percent_string</span> 
+    
+    <span class="k">return</span> <span class="n">data_dict</span>
+
+<span class="n">links</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">&#39;links.json&#39;</span><span class="p">))</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;indiegogo_Ray.csv&#39;</span><span class="p">,</span><span class="s">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">u&#39;location,category,duration,amount_raised,raising_goal,percent</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">parse_page</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="s">u&#39;{location},{category},{duration},{amount_raised},{raising_goal},{percent}</span><span class="se">\n</span><span class="s">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">,</span><span class="s">&#39;replace&#39;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In this notebook, you'll</p>
 <ul>
