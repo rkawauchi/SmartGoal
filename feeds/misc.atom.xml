@@ -51,7 +51,7 @@ pdflatex NB4_report.tex&lt;/code&gt;&lt;/pre&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="team-member-responsible-for-this-notebook"&gt;Team member responsible for this notebook:&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: changed the data mode/class from characters to factors/numerics, and removed unwanted characters and corrupted data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: analyzed the general data structure, changed the data mode/class from characters to factors/numerics, and removed unwanted characters and corrupted data&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
