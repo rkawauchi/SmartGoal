@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>SmartGoal</title><link href="https://rkawauchi.github.io/SmartGoal/" rel="alternate"></link><link href="https://rkawauchi.github.io/SmartGoal/feeds/all.atom.xml" rel="self"></link><id>https://rkawauchi.github.io/SmartGoal/</id><updated>2014-03-04T00:00:00-08:00</updated><entry><title>Project Report</title><link href="https://rkawauchi.github.io/SmartGoal/nb4.html" rel="alternate"></link><updated>2014-03-04T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-04:SmartGoal/nb4.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="SmartGoal:-Need-funds?-SmartGoal-helps-your-fundraising-campaign-reach-the-goal."&gt;SmartGoal: Need funds? SmartGoal helps your fundraising campaign reach the goal.&lt;a class="anchor-link" href="#SmartGoal:-Need-funds?-SmartGoal-helps-your-fundraising-campaign-reach-the-goal."&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="SmartGoal-=-Reach-Your-Goal"&gt;SmartGoal = Reach Your Goal&lt;a class="anchor-link" href="#SmartGoal-=-Reach-Your-Goal"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Need-funds?-SmartGoal-helps-your-fundraising-campaign-reach-the-goal."&gt;Need funds? SmartGoal helps your fundraising campaign reach the goal.&lt;a class="anchor-link" href="#Need-funds?-SmartGoal-helps-your-fundraising-campaign-reach-the-goal."&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
@@ -3643,6 +3647,9 @@ In&amp;nbsp;[38]:
 &lt;h1 id="Data-Gathering-from-Indiegogo.com"&gt;Data Gathering from Indiegogo.com&lt;a class="anchor-link" href="#Data-Gathering-from-Indiegogo.com"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
 
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;strong&gt;SUMARRY:&lt;/strong&gt; Using complex Python packages, more than 10,000 data was extracted from the Indiegogo.com website. The code also cleans and formats so that the data is readily available and easy to transfer.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;From indiegogo website, we can find pages that have a list of cells for different campaigns. These cells have only part of the information about the campaign. Therefore, if we want to know more details about the project, we have to go into its individual page. After clicking on one cell, we will be directed into the campaign page that has all the informaiton we want about the project.&lt;/p&gt;
 &lt;/div&gt;
