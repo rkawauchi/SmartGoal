@@ -12,6 +12,7 @@ data = subset(data, str_sub(data[,4],-3,-1) == 'USD')
 dim(data)[1]
 # no. of USD projects: 9,189
 
+
 ### celarn duration: remove negative duration
 durationClean = function(data){
   du = data[,3]
@@ -103,23 +104,24 @@ boxPlot = function(){
 
 boxPlot()
 
+
 ####################### Best Duration Advise #######################
 
-# 1.
-# check number of projects in each range
-amount = data[,4]
-
-amt2K = dim(data[amount<=2000,])[1]
-amt2.5K = dim(data[amount>2000 & amount<=5000,])[1]
-amt5.10K = dim(data[amount>5000 & amount <=10000,])[1]
-amt10.20K = dim(data[amount>10000 & amount <=20000,])[1]
-amt20.30K = dim(data[amount>20000 & amount <=30000,])[1]
-amt30.40K = dim(data[amount>30000 & amount <=40000,])[1]
-amt40.50K = dim(data[amount>40000 & amount <=50000,])[1]
-amt50.100K = dim(data[amount>50000 & amount <=100000,])[1]
-amt100.400K = dim(data[amount>100000 & amount <=400000,])[1]
-
 # general function for given industry and target amount
+
+# category to choose:
+# [1] "Film"           "Community"      "Music"          "Education"     
+# [5] "Health"         "Small Business" "Technology"     "Theater"       
+# [9] "Art"            "Sports"         "Writing"        "Animals"       
+# [13] "Video / Web"    "Food"           "Environment"    "Religion"      
+# [17] "Dance"          "Gaming"         "Fashion"        "Photography"   
+# [21] "Design"         "Politics"       "Comic"          "Transmedia"
+
+# target fund-raising amount to choose (column number):
+#      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]   [,8]
+# [1,]    0  5000 10000 20000 30000 40000 50000  100000
+# [2,] 5000 10000 20000 30000 40000 50000 100000 400000
+
 bestDuration = function(data, category, index){
   amountMat = matrix(0,2,8)
   amountMat[1,] = c(0,5000,10000,20000,30000,40000,50000,100000)
@@ -155,103 +157,125 @@ bestDuration = function(data, category, index){
 
 bestDuration(data,"Film",3)
 
-# category to choose:
+
+
+##################### probability calculation: logit model prep #####################
+# 1.
+# Make Logit model base matrix
+intercep = 1
+nCat = 24
+nTarget = 9
+nDuration = 6
+nY = 1
+nRow = dim(data)[1]
+nTotal = intercep + nCat + nTarget + nDuration + nY
+
+baseX = data.frame(data, matrix(0,nRow, nTotal))
+baseX[,7]=1
+colnames(baseX) = c('location','category','duration','amount_raised','amount_goal','percent',"a", c(rownames(catTable[1:24,]),"<5K","<10K","<20K","<30K","<40K","<50K","<100K","<400K",">400K","<30d","30d","40d","45d","60d",">60d","Y"))
+
+# 2.
+#################### assign category columns
+catChange = function(baseX){
+  names = rownames(catTable[1:24,])
+  category = baseX[,2]
+  for(i in 1:24){
+    baseX[category == names[i],i+7] = 1
+  }
+  #for(i in 11:24){
+  #  baseX[category == names[i],18] = 1
+  #}
+  return(baseX)
+}
+
+baseX = catChange(baseX)
+
+#################### assign target amount columns
+targetChange = function(baseX){
+  targetList = c(0,5000,10000,20000,30000,40000,50000,100000,400000,10000000000000)
+  target = baseX[,5]
+  for(i in 1:9){
+    baseX[target>targetList[i] & target<=targetList[i+1],i+31] = 1
+  }
+  return(baseX)
+}
+
+baseX = targetChange(baseX)
+
+#################### assign duration columns
+durationChange = function(baseX){
+  durationList = c(30,40,45,60,61)
+  duration = baseX[,3]
+  baseX[duration<30,41] = 1
+  baseX[duration>60,46] = 1
+  for(i in 1:4){
+    baseX[duration>=durationList[i] & duration<durationList[i+1],i+41] = 1
+  }
+  return(baseX)
+}
+
+baseX = durationChange(baseX)
+
+#################### assign Y
+
+yChange = function(baseX){
+  percent = baseX[,6]
+  baseX[percent>=100,47] = 1
+  return(baseX)
+}
+
+baseX = yChange(baseX)
+X = baseX[,8:46]
+Y = baseX[,47]
+
+# 2.
+# Logit Regression
+dataLogit = cbind(Y,X)
+
+modelLogit = glm(Y ~ ., data = dataLogit, family = "binomial")
+beta = summary(modelLogit)$coef[,1]
+
+#####################  logit model #####################
+
+# Generalized Function!
+
+# category to choose: (Film = 1 ~ Comic = 23)
 # [1] "Film"           "Community"      "Music"          "Education"     
 # [5] "Health"         "Small Business" "Technology"     "Theater"       
 # [9] "Art"            "Sports"         "Writing"        "Animals"       
 # [13] "Video / Web"    "Food"           "Environment"    "Religion"      
 # [17] "Dance"          "Gaming"         "Fashion"        "Photography"   
-# [21] "Design"         "Politics"       "Comic"          "Transmedia"
+# [21] "Design"         "Politics"       "Comic"
 
 # target fund-raising amount to choose (column number):
 #      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]   [,8]
 # [1,]    0  5000 10000 20000 30000 40000 50000  100000
 # [2,] 5000 10000 20000 30000 40000 50000 100000 400000
 
+# fundraising campaign duration to choose (column number):
+#       [,1] [,2] [,3] [,4] [,5]
+# [1,]  <30   30   40   45   60 
 
 
-
-##################### probability calculation: logit model #####################
-################### DRAFT *Does not work. Just copied* DRAFT ###################
-
-nllX = matrix(0,row,(1+9+8+4))
-colnames(nllX)  = c("a", c(rownames(indTable[1:10,]),"Other","<5K","<10K","<20K",
-                           "<30K","<40K","<50K","<100K","<400K","<30","30","40","45","60",">60"))
-# dX[,1] = 1
-
-# Change age columns
-for(i in 1:row){
-  if(pac[i,1] >= 20 & pac[i,1] <= 39){
-    dX[i,2] = 1
-  }
-  else {
-    if(pac[i,1] >= 40 & pac[i,1] <= 64){
-      dX[i,3] = 1
-    }
-    else {
-      if(pac[i,1] >= 65){
-        dX[i,4] = 1
-      }
-    }
-  }
+predict = function(cat, target, duration){
+  predicX = c(1,rep(0,36))
+  catName = catName # 1:24
+  beta = beta
+  # assign industry category
+  catN = match(cat,catName) +1
+  predicX[catN]=1
+  # assign target amount
+  targetN = target + 24
+  predicX[targetN] = 1
+  # assign duration
+  durationN = duration + 32
+  predicX[durationN] = 1
+  predicY = predicX %*% beta
+  successP = plogis(predicY)
+  return(successP)
 }
 
-# Change sex colmun
-for(i in 1:row){
-  if(pac[i,2] == 1){
-    dX[i,5] = 1
-  }
-}
-
-# change race column
-for(i in 1:row){
-  if(pac[i,3] == 1){
-    dX[i,6] = 1
-  }
-}
-
-# Change the education
-for(i in 1:row){
-  if(pac[i,8] == 39){
-    dX[i,7] = 1
-  }
-  else {
-    if(pac[i,8] >= 40){
-      dX[i,8] = 1
-    }
-  }
-}
-
-# make Y col vector
-Y = matrix(0, row, 1)
-for(i in 1:row){
-  if(pac[i,9] == 1){
-    Y[i,1] = 1
-  }
-}
-
-# 2.
-nll <- function(beta){
-  beta = matrix(beta, ncol= 1, nrow = 8)
-  return(-(-sum(log(1+exp(dX %*% beta)))+ sum(t(Y) %*% (dX %*% beta))))
-}
-
-# test function
-betaVec = c(1:8) 
-nll(betaVec) #returns a scalar
-
-# minimize and find the optimal beta vector
-betaHat <- optim(c(rep(1,8)), f = nll, method = "BFGS")
-betaHat$par
-
-
-
-
-
-
-
-
-
+predict('Technology',1,2)
 
 
 
