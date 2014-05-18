@@ -2217,10 +2217,7 @@ In&amp;nbsp;[]:
 &lt;pre&gt;&lt;code&gt;./visualization&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Cleaning</title><link href="https://rkawauchi.github.io/SmartGoal/nb2.html" rel="alternate"></link><updated>2014-03-02T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-02:SmartGoal/nb2.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="team-member-responsible-for-this-notebook"&gt;Team member responsible for this notebook:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: analyzed the general data structure, changed the data mode/class from characters to factors/numerics, and removed unwanted characters and corrupted data&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;SUMARRY:&lt;/strong&gt; Over 10,000 fund raising projects were downloaded from Indiegogo.com for duration and fund raising sucess analysis. To ensure that the analysis are done properly, we diagnosed the data, cleaned the data so that proper functions can run, and removed anomalities and changed the class/mode of that date. This data cleaning strengthens the credibility of our analysis conclusions, yet careful cleaning judgement is also critical as we do not want to remove the data thinking they were anomalities even though they actually are telling the true data structures.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="Data-Check"&gt;Data Check&lt;a class="anchor-link" href="#Data-Check"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
@@ -2577,6 +2574,12 @@ In&amp;nbsp;[38]:
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;clean categorical and quantitative variables&lt;/strong&gt; (by removing observations and variables with too many missing values, by consolidating categorical variables, by selecting an appropriate subset of variables and observations for later analysis, etc.)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;save the cleaned data&lt;/strong&gt; into csv files in the &lt;code&gt;./data/cleaned&lt;/code&gt; directory&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;save interesting graphics&lt;/strong&gt; you obtained during visual exploration into the &lt;code&gt;./visualiation&lt;/code&gt; directory&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="team-member-responsible-for-this-notebook"&gt;Team member responsible for this notebook:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: analyzed the general data structure, changed the data mode/class from characters to factors/numerics, and removed unwanted characters and corrupted data&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Gathering</title><link href="https://rkawauchi.github.io/SmartGoal/nb1.html" rel="alternate"></link><updated>2014-03-01T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-01:SmartGoal/nb1.html</id><summary type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
