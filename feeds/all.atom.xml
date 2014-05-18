@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>SmartGoal</title><link href="https://rkawauchi.github.io/SmartGoal/" rel="alternate"></link><link href="https://rkawauchi.github.io/SmartGoal/feeds/all.atom.xml" rel="self"></link><id>https://rkawauchi.github.io/SmartGoal/</id><updated>2014-03-04T00:00:00-08:00</updated><entry><title>Project Report</title><link href="https://rkawauchi.github.io/SmartGoal/nb4.html" rel="alternate"></link><updated>2014-03-04T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-04:SmartGoal/nb4.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="team-members-responsible-for-this-notebook"&gt;Team members responsible for this notebook:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: summarized the main purpose of the project&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Po Jui Chiu&lt;/strong&gt;: listed the action plans how we can achieve reach the goal&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="SmartGoal"&gt;SmartGoal&lt;a class="anchor-link" href="#SmartGoal"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
-&lt;/div&gt;
-
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Need-funds?-SmartGoal-helps-your-fund-raising-campaign-reach-the-goal."&gt;Need funds? SmartGoal helps your fund-raising campaign reach the goal.&lt;a class="anchor-link" href="#Need-funds?-SmartGoal-helps-your-fund-raising-campaign-reach-the-goal."&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="SmartGoal:-Need-funds?-SmartGoal-helps-your-fundraising-campaign-reach-the-goal."&gt;SmartGoal: Need funds? SmartGoal helps your fundraising campaign reach the goal.&lt;a class="anchor-link" href="#SmartGoal:-Need-funds?-SmartGoal-helps-your-fundraising-campaign-reach-the-goal."&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
@@ -181,14 +170,14 @@ EH//2Q==
 
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Motivation:"&gt;Motivation:&lt;a class="anchor-link" href="#Motivation:"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id="Motivation:"&gt;Motivation:&lt;a class="anchor-link" href="#Motivation:"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
 
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Are you &lt;strong&gt;raising funds&lt;/strong&gt; for your innovative ideas to develop a products?&lt;/p&gt;
-&lt;p&gt;Are you &lt;strong&gt;raising funds&lt;/strong&gt; for your daughter's soccer team's camping?&lt;/p&gt;
-&lt;p&gt;Inspired by the crowdfunding website, Indiegogo.com, we are interested in finding the best duration of the fund-raising campaings and correlation between the duration, industry the projects are in, and the fund-raising goals.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The motivation:&lt;/strong&gt; UC Berkeley is fortunate to have many successful entrepreneurs and innovative ideas that, data analysis of how innovative projects can maximize their fundraising goals can contribute to the Berkeley academic society, outside of the class project.&lt;/p&gt;
+&lt;p&gt;Are you &lt;strong&gt;raising funds&lt;/strong&gt; for your innovative ideas to develop new products?&lt;/p&gt;
+&lt;p&gt;Are you &lt;strong&gt;raising funds&lt;/strong&gt; for your daughter's soccer team's camping trip?&lt;/p&gt;
+&lt;p&gt;Inspired by the crowdfunding website, Indiegogo.com, we are interested in finding the best duration of the fundraising campaings and predicting how likey a potential fundraising campaign reach its goal amount.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The motivation:&lt;/strong&gt; UC Berkeley is fortunate to have many successful entrepreneurs and innovative ideas, and the data analysis of how innovative projects can maximize their fundraising goals can contribute to the Berkeley academic society, outside of the class project.&lt;/p&gt;
 &lt;p&gt;Especially in this crowdfunding era, this analysis aims to excelerate the contribution of innovative ideas to the world.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -196,37 +185,20 @@ EH//2Q==
 &lt;/div&gt;
 
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;DRAFT DRAFT&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;In this notebook, you'll sumarize your finding for the class presentation.&lt;/p&gt;
-&lt;p&gt;The class presentation will use this notebook in slide mode, as I do during lecture time.&lt;/p&gt;
-&lt;p&gt;You'll need to download the following &lt;a href="https://github.com/fperez/nb-slideshow-template/archive/master.zip"&gt;zip file&lt;/a&gt;, unzip it, and run the following notebook &lt;code&gt;install-support.ipynb&lt;/code&gt; to install the slide capabilities.&lt;/p&gt;
-&lt;p&gt;The notebook &lt;code&gt;notebook-slideshow-example.ipynb&lt;/code&gt; will give you examples on how to use slides within the iPython notebook.&lt;/p&gt;
-&lt;p&gt;You should also write this notebook so that you can convert it nicely into a pdf document using the commands&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ipython nbconvert NB4_report.pynb --to latex
-pdflatex NB4_report.tex&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;See &lt;a href="http://ipython.org/ipython-doc/rel-1.0.0/interactive/nbconvert.html"&gt;here&lt;/a&gt; for further references on how to do that.&lt;/p&gt;
-&lt;p&gt;In this notebook, you'll&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;describe your problem as stated in the propectus&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;comment on your data sources, on their format, on the difficulties to get them&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;present the main challenge you encountered&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;present your finding in the form of expresive graphics&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Be sure to include an introduction section motivating your visualizations, with a description of the substantive context and why it is interesting.&lt;/p&gt;
-&lt;p&gt;Cite the source of the data and any other references that you used in carrying out your project.&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Analysis</title><link href="https://rkawauchi.github.io/SmartGoal/nb3.html" rel="alternate"></link><updated>2014-03-03T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-03:SmartGoal/nb3.html</id><summary type="html">&lt;p&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="team-member-responsible-for-this-notebook"&gt;Team member responsible for this notebook:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: Visualized the data and analyzed how to present the best fund-raising duration and logit model to predict the probability of reaching the fund-raising goals&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gather Data&lt;/strong&gt;:Extract data from indiegogo.com website (Python)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Clean Data&lt;/strong&gt;: Go through the data and remove anomalities, and adjust/convert the original data into appropriate formats (R)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Analyze Data&lt;/strong&gt;: Analyze and visualize the trend of data, design the &lt;strong&gt;best duration&lt;/strong&gt; and &lt;strong&gt;success probability&lt;/strong&gt; models (R)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="Results:"&gt;Results:&lt;a class="anchor-link" href="#Results:"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[2]:
+In&amp;nbsp;[3]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;load_ext&lt;/span&gt; &lt;span class="n"&gt;rmagic&lt;/span&gt;
@@ -237,13 +209,128 @@ In&amp;nbsp;[2]:
 
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Data-Analysis"&gt;Data Analysis&lt;a class="anchor-link" href="#Data-Analysis"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="1.-The-Best-Duration-Model"&gt;1. The Best Duration Model&lt;a class="anchor-link" href="#1.-The-Best-Duration-Model"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;The user pick the category of the industry, and the target fundraising amount index depending on the actual amount, the model advices the best and most picked duration. The duration is important as the fundraisers are charged for the length of the fundrasing durations.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[3]:
+In&amp;nbsp;[6]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
+&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;./data/script/Indiegogo2.R&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
+&lt;pre&gt;
+Error in file(filename, &amp;quot;r&amp;quot;, encoding = encoding) : 
+  cannot open the connection
+In addition: Warning message:
+In file(filename, &amp;quot;r&amp;quot;, encoding = encoding) :
+  cannot open file &amp;apos;./data/script/Indiegogo2.R&amp;apos;: No such file or directory
+Error in file(filename, &amp;quot;r&amp;quot;, encoding = encoding) : 
+  cannot open the connection
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[1]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# general function for given industry and target amount&lt;/span&gt;
+
+&lt;span class="c"&gt;# category to choose:&lt;/span&gt;
+&lt;span class="c"&gt;# [1] &amp;quot;Film&amp;quot;           &amp;quot;Community&amp;quot;      &amp;quot;Music&amp;quot;          &amp;quot;Education&amp;quot;     &lt;/span&gt;
+&lt;span class="c"&gt;# [5] &amp;quot;Health&amp;quot;         &amp;quot;Small Business&amp;quot; &amp;quot;Technology&amp;quot;     &amp;quot;Theater&amp;quot;       &lt;/span&gt;
+&lt;span class="c"&gt;# [9] &amp;quot;Art&amp;quot;            &amp;quot;Sports&amp;quot;         &amp;quot;Writing&amp;quot;        &amp;quot;Animals&amp;quot;       &lt;/span&gt;
+&lt;span class="c"&gt;# [13] &amp;quot;Video / Web&amp;quot;    &amp;quot;Food&amp;quot;           &amp;quot;Environment&amp;quot;    &amp;quot;Religion&amp;quot;      &lt;/span&gt;
+&lt;span class="c"&gt;# [17] &amp;quot;Dance&amp;quot;          &amp;quot;Gaming&amp;quot;         &amp;quot;Fashion&amp;quot;        &amp;quot;Photography&amp;quot;   &lt;/span&gt;
+&lt;span class="c"&gt;# [21] &amp;quot;Design&amp;quot;         &amp;quot;Politics&amp;quot;       &amp;quot;Comic&amp;quot;          &amp;quot;Transmedia&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;# target fund-raising amount to choose (column number):&lt;/span&gt;
+&lt;span class="c"&gt;#      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]   [,8]&lt;/span&gt;
+&lt;span class="c"&gt;# [1,]    0  5000 10000 20000 30000 40000 50000  100000&lt;/span&gt;
+&lt;span class="c"&gt;# [2,] 5000 10000 20000 30000 40000 50000 100000 400000&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_pyerr"&gt;
+&lt;pre&gt;
+&lt;span class="ansicyan"&gt;  File &lt;/span&gt;&lt;span class="ansigreen"&gt;&amp;quot;&amp;lt;ipython-input-1-5214a5c5047a&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class="ansicyan"&gt;, line &lt;/span&gt;&lt;span class="ansigreen"&gt;17&lt;/span&gt;
+&lt;span class="ansiyellow"&gt;    %%R --bg&lt;/span&gt;
+&lt;span class="ansigrey"&gt;    ^&lt;/span&gt;
+&lt;span class="ansired"&gt;SyntaxError&lt;/span&gt;&lt;span class="ansired"&gt;:&lt;/span&gt; invalid syntax
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="team-members-responsible-for-this-notebook"&gt;Team members responsible for this notebook:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: summarized the main purpose and the results of the project * **&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Analysis</title><link href="https://rkawauchi.github.io/SmartGoal/nb3.html" rel="alternate"></link><updated>2014-03-03T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-03:SmartGoal/nb3.html</id><summary type="html">&lt;p&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;strong&gt;SUMARRY:&lt;/strong&gt; The cleaned data is analyzed using statistical tools and concepts. The analysis were run over projects' industry categories, fundraising durations and target fundraising amounts to fine turn the best duration advice function and probability model. The best duration function is to provide the best fundraising duration given the industry category and the target fundraising amount, to aid potential fundraisers, and the probability model is the how likely a potential fundraising campaign can reach a target fundraising amount. We first explore the data analysis, and introduce the best duration and probability models.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="I.-Data-Analysis"&gt;I. Data Analysis&lt;a class="anchor-link" href="#I.-Data-Analysis"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;The data is further simplified to develope a best duration model and logit predictive model.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[1]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;load_ext&lt;/span&gt; &lt;span class="n"&gt;rmagic&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;The cleaned data is stored in /data/cleaned folder and loaded for the analysis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[2]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
@@ -254,14 +341,21 @@ In&amp;nbsp;[3]:
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="1.-Fundraising-Industry-Category"&gt;1. Fundraising Industry Category&lt;a class="anchor-link" href="#1.-Fundraising-Industry-Category"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Each variable (industry category, durations, target amount) is first analyzed to make data visualization for duration and success probability models. Per below function, we know that there are 24 industry categories starting Film being the most frequent fundraising campaigne industry, and Community, Music etc follow. A very quick graph is shown to visualize the frequency differences.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[4]:
+In&amp;nbsp;[3]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="c"&gt;# decide which cut-off of category&lt;/span&gt;
+&lt;span class="c"&gt;# visualization of industry category&lt;/span&gt;
 &lt;span class="n"&gt;catAnalysis&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
   &lt;span class="n"&gt;indTable&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;table&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
   &lt;span class="n"&gt;indTable&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;indTable&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;order&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;indTable&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
@@ -529,10 +623,13 @@ H7rrA7vn6XfVAAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Then the factorized industry categories are put into a table to give a summary of each industry. This is to get a holistic idea of the data.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[5]:
+In&amp;nbsp;[4]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
@@ -593,10 +690,17 @@ In&amp;nbsp;[5]:
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="2.-Fundrasing-Duration"&gt;2. Fundrasing Duration&lt;a class="anchor-link" href="#2.-Fundrasing-Duration"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;To see the big picture of how the fundrasing duration is distributed, function below is run to visualize the distribution of durations picked by the fundraisers. Per graphs, we conclude that we focus on the fundraising durations that are 30, 40, 45, 60 days.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[6]:
+In&amp;nbsp;[5]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
@@ -1126,14 +1230,21 @@ AAAAAElFTkSuQmCC
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="3.-Fundraising-Target-Amount"&gt;3. Fundraising Target Amount&lt;a class="anchor-link" href="#3.-Fundraising-Target-Amount"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;To visualize the distribution, compare inbetween the industries, and understand the outliers of the money actually raised in Indiegogo.com campaign, we made boxplots per industry.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[7]:
+In&amp;nbsp;[6]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="c"&gt;# comparison between industry&amp;#39;s raised_amount (took log)&lt;/span&gt;
+&lt;span class="c"&gt;# comparison between industry&amp;#39;s raised_amount (logalized)&lt;/span&gt;
 &lt;span class="n"&gt;boxPlot&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt;
   &lt;span class="n"&gt;category&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
   &lt;span class="n"&gt;indNames&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;catTable&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1753,19 +1864,56 @@ AElFTkSuQmCC
 
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Best-Fund-Raising-Campaigne-Duration"&gt;Best Fund-Raising Campaigne Duration&lt;a class="anchor-link" href="#Best-Fund-Raising-Campaigne-Duration"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="II.-Prediction-Model"&gt;II. Prediction Model&lt;a class="anchor-link" href="#II.-Prediction-Model"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
 
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="1.-Best-Fundraising-Campaigne-Duration"&gt;1. Best Fundraising Campaigne Duration&lt;a class="anchor-link" href="#1.-Best-Fundraising-Campaigne-Duration"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;After analyzing the data, the model to advice the best duration given the industry category, and the target amount, which was grouped in to 8 per analysis above:&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[8]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="c"&gt;############### Best Duration Advise ############&lt;/span&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# industry category to choose from:&lt;/span&gt;
 
-&lt;span class="n"&gt;bestDuration&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;category&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+&lt;span class="c"&gt;# [1] &amp;quot;Film&amp;quot;           &amp;quot;Community&amp;quot;      &amp;quot;Music&amp;quot;          &amp;quot;Education&amp;quot;     &lt;/span&gt;
+&lt;span class="c"&gt;# [5] &amp;quot;Health&amp;quot;         &amp;quot;Small Business&amp;quot; &amp;quot;Technology&amp;quot;     &amp;quot;Theater&amp;quot;       &lt;/span&gt;
+&lt;span class="c"&gt;# [9] &amp;quot;Art&amp;quot;            &amp;quot;Sports&amp;quot;         &amp;quot;Writing&amp;quot;        &amp;quot;Animals&amp;quot;       &lt;/span&gt;
+&lt;span class="c"&gt;# [13] &amp;quot;Video / Web&amp;quot;    &amp;quot;Food&amp;quot;           &amp;quot;Environment&amp;quot;    &amp;quot;Religion&amp;quot;      &lt;/span&gt;
+&lt;span class="c"&gt;# [17] &amp;quot;Dance&amp;quot;          &amp;quot;Gaming&amp;quot;         &amp;quot;Fashion&amp;quot;        &amp;quot;Photography&amp;quot;   &lt;/span&gt;
+&lt;span class="c"&gt;# [21] &amp;quot;Design&amp;quot;         &amp;quot;Politics&amp;quot;       &amp;quot;Comic&amp;quot;          &amp;quot;Transmedia&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;# target fundraising amount to choose from (column number):&lt;/span&gt;
+
+&lt;span class="c"&gt;#      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]   [,8]&lt;/span&gt;
+&lt;span class="c"&gt;# [1,]    0  5000 10000 20000 30000 40000 50000  100000&lt;/span&gt;
+&lt;span class="c"&gt;# [2,] 5000 10000 20000 30000 40000 50000 100000 400000&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;The model takes the industry category and the target amount index, and return the best and most-picked durations to advice the potential website users.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[9]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
+&lt;span class="c"&gt;# The Model:&lt;/span&gt;
+
+&lt;span class="n"&gt;bestDuration&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;category&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+  &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;
   &lt;span class="n"&gt;amountMat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
   &lt;span class="n"&gt;amountMat&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;20000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;30000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;40000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;50000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;100000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
   &lt;span class="n"&gt;amountMat&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;20000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;30000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;40000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;50000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;100000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;400000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1806,24 +1954,13 @@ In&amp;nbsp;[8]:
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[9]:
+In&amp;nbsp;[12]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bestDuration&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Film&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="c"&gt;# Demonstration of running the model:&lt;/span&gt;
 
-&lt;span class="c"&gt;# category to choose:&lt;/span&gt;
-&lt;span class="c"&gt;# [1] &amp;quot;Film&amp;quot;           &amp;quot;Community&amp;quot;      &amp;quot;Music&amp;quot;          &amp;quot;Education&amp;quot;     &lt;/span&gt;
-&lt;span class="c"&gt;# [5] &amp;quot;Health&amp;quot;         &amp;quot;Small Business&amp;quot; &amp;quot;Technology&amp;quot;     &amp;quot;Theater&amp;quot;       &lt;/span&gt;
-&lt;span class="c"&gt;# [9] &amp;quot;Art&amp;quot;            &amp;quot;Sports&amp;quot;         &amp;quot;Writing&amp;quot;        &amp;quot;Animals&amp;quot;       &lt;/span&gt;
-&lt;span class="c"&gt;# [13] &amp;quot;Video / Web&amp;quot;    &amp;quot;Food&amp;quot;           &amp;quot;Environment&amp;quot;    &amp;quot;Religion&amp;quot;      &lt;/span&gt;
-&lt;span class="c"&gt;# [17] &amp;quot;Dance&amp;quot;          &amp;quot;Gaming&amp;quot;         &amp;quot;Fashion&amp;quot;        &amp;quot;Photography&amp;quot;   &lt;/span&gt;
-&lt;span class="c"&gt;# [21] &amp;quot;Design&amp;quot;         &amp;quot;Politics&amp;quot;       &amp;quot;Comic&amp;quot;          &amp;quot;Transmedia&amp;quot;&lt;/span&gt;
-
-&lt;span class="c"&gt;# target fund-raising amount to choose (column number):&lt;/span&gt;
-&lt;span class="c"&gt;#      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]   [,8]&lt;/span&gt;
-&lt;span class="c"&gt;# [1,]    0  5000 10000 20000 30000 40000 50000  100000&lt;/span&gt;
-&lt;span class="c"&gt;# [2,] 5000 10000 20000 30000 40000 50000 100000 400000&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bestDuration&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Film&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -2185,21 +2322,357 @@ AElFTkSuQmCC
 
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Predictive-Analysis-for-Probability-of-Reaching-the-Funding-Goal"&gt;Predictive Analysis for Probability of Reaching the Funding Goal&lt;a class="anchor-link" href="#Predictive-Analysis-for-Probability-of-Reaching-the-Funding-Goal"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="2.-Probability-of-Reaching-the-Fundraising-Goal:-Logit-Regression"&gt;2. Probability of Reaching the Fundraising Goal: Logit Regression&lt;a class="anchor-link" href="#2.-Probability-of-Reaching-the-Fundraising-Goal:-Logit-Regression"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
 
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;We converted the original data into a binary design matrix, and estimated the coefficients of industry categories, target fundrasing amounts and durations using &lt;strong&gt;Logit Regression&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="2.1-Binary-Design-Matrix-Construction"&gt;2.1 Binary Design Matrix Construction&lt;a class="anchor-link" href="#2.1-Binary-Design-Matrix-Construction"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;We use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Intercept&lt;/strong&gt;: 1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Category&lt;/strong&gt;: 24 industries&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Target Amount&lt;/strong&gt;: 9 grouped amount brackets&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Duration&lt;/strong&gt;: 6 groups of duration selections&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Y&lt;/strong&gt;: 1 column of response variable; 1 = 100% reached the target amount, 0 otherwise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and the total of 41 columns all in 0 and 1.&lt;/p&gt;
+&lt;p&gt;To make the binary matrix depending on the original data, the original data is put in cbind to the design matrix.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[]:
+In&amp;nbsp;[17]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="c"&gt;### UNDER CONSTRUCTION ##&lt;/span&gt;
-&lt;span class="c"&gt;# turn the data into binary and fit to logit model:&lt;/span&gt;
-&lt;span class="n"&gt;nll&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-  &lt;span class="n"&gt;beta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ncol&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nrow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dX&lt;/span&gt; &lt;span class="o"&gt;%*%&lt;/span&gt; &lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;%*%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dX&lt;/span&gt; &lt;span class="o"&gt;%*%&lt;/span&gt; &lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;))))&lt;/span&gt;
+&lt;span class="c"&gt;# Make Logit model base matrix&lt;/span&gt;
+
+&lt;span class="n"&gt;nRow&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;8584&lt;/span&gt;
+&lt;span class="n"&gt;nTotal&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;41&lt;/span&gt; &lt;span class="c"&gt;# &lt;/span&gt;
+
+&lt;span class="n"&gt;baseX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;frame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nRow&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nTotal&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="n"&gt;colnames&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;location&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;category&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;duration&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;amount_raised&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;amount_goal&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;percent&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="s"&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rownames&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;catTable&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,]),&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;lt;5K&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;lt;10K&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;lt;20K&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;lt;30K&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;lt;40K&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;lt;50K&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;lt;100K&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;lt;400K&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;gt;400K&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="s"&gt;&amp;quot;&amp;lt;30d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;30d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;40d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;45d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;60d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&amp;gt;60d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Y&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;colnames&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
+
+&lt;pre&gt;
+ [1] &amp;quot;location&amp;quot;       &amp;quot;category&amp;quot;       &amp;quot;duration&amp;quot;       &amp;quot;amount_raised&amp;quot; 
+ [5] &amp;quot;amount_goal&amp;quot;    &amp;quot;percent&amp;quot;        &amp;quot;a&amp;quot;              &amp;quot;Film&amp;quot;          
+ [9] &amp;quot;Community&amp;quot;      &amp;quot;Music&amp;quot;          &amp;quot;Education&amp;quot;      &amp;quot;Technology&amp;quot;    
+[13] &amp;quot;Health&amp;quot;         &amp;quot;Small Business&amp;quot; &amp;quot;Theater&amp;quot;        &amp;quot;Art&amp;quot;           
+[17] &amp;quot;Writing&amp;quot;        &amp;quot;Video / Web&amp;quot;    &amp;quot;Gaming&amp;quot;         &amp;quot;Animals&amp;quot;       
+[21] &amp;quot;Sports&amp;quot;         &amp;quot;Food&amp;quot;           &amp;quot;Environment&amp;quot;    &amp;quot;Design&amp;quot;        
+[25] &amp;quot;Fashion&amp;quot;        &amp;quot;Photography&amp;quot;    &amp;quot;Dance&amp;quot;          &amp;quot;Comic&amp;quot;         
+[29] &amp;quot;Religion&amp;quot;       &amp;quot;Politics&amp;quot;       &amp;quot;Transmedia&amp;quot;     &amp;quot;&amp;lt;5K&amp;quot;           
+[33] &amp;quot;&amp;lt;10K&amp;quot;           &amp;quot;&amp;lt;20K&amp;quot;           &amp;quot;&amp;lt;30K&amp;quot;           &amp;quot;&amp;lt;40K&amp;quot;          
+[37] &amp;quot;&amp;lt;50K&amp;quot;           &amp;quot;&amp;lt;100K&amp;quot;          &amp;quot;&amp;lt;400K&amp;quot;          &amp;quot;&amp;gt;400K&amp;quot;         
+[41] &amp;quot;&amp;lt;30d&amp;quot;           &amp;quot;30d&amp;quot;            &amp;quot;40d&amp;quot;            &amp;quot;45d&amp;quot;           
+[45] &amp;quot;60d&amp;quot;            &amp;quot;&amp;gt;60d&amp;quot;           &amp;quot;Y&amp;quot;             
+
+&lt;/pre&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Change the categorical input into binary, and make the appropriate column 1 :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[18]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
+&lt;span class="c"&gt;# convert industry into binary&lt;/span&gt;
+
+&lt;span class="n"&gt;catChange&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+  &lt;span class="n"&gt;names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;rownames&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;catTable&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;,])&lt;/span&gt;
+  &lt;span class="n"&gt;category&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;24&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;category&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;baseX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;catChange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[19]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
+&lt;span class="c"&gt;# convert target amount category into binary&lt;/span&gt;
+
+&lt;span class="n"&gt;targetChange&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+  &lt;span class="n"&gt;targetList&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;20000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;30000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;40000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;50000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;100000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;400000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10000000000000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="n"&gt;targetList&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="n"&gt;targetList&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;31&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;baseX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;targetChange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[20]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
+&lt;span class="c"&gt;# convert duration category into binay&lt;/span&gt;
+
+&lt;span class="n"&gt;durationChange&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+  &lt;span class="n"&gt;durationList&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;40&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;45&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;61&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;duration&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;duration&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;41&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+  &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;duration&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;46&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+  &lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+    &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;duration&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="n"&gt;durationList&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;duration&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;durationList&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;41&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;baseX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;durationChange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[21]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
+&lt;span class="c"&gt;# create Y per % of target amount reached per campain&lt;/span&gt;
+&lt;span class="c"&gt;# 1 = 100% reached, 0 otherwise&lt;/span&gt;
+
+&lt;span class="n"&gt;yChange&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+  &lt;span class="n"&gt;percent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;percent&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;47&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;baseX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;yChange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;As an example, a campaign in New York is shown: It is in Art industry which raised 85% of its target amount of US1,500 for the duration setting of 37 days. This data is converted to a row with the category 'Art' column, the target '&amp;lt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[27]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5500&lt;/span&gt;&lt;span class="p"&gt;,])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
+
+&lt;pre&gt;
+                              location category duration amount_raised
+5500 Purchase, New York, United States      Art       37          1275
+     amount_goal percent a Film Community Music Education Technology Health
+5500        1500      85 1    0         0     0         0          0      0
+     Small Business Theater Art Writing Video / Web Gaming Animals Sports Food
+5500              0       0   1       0           0      0       0      0    0
+     Environment Design Fashion Photography Dance Comic Religion Politics
+5500           0      0       0           0     0     0        0        0
+     Transmedia &amp;lt;5K &amp;lt;10K &amp;lt;20K &amp;lt;30K &amp;lt;40K &amp;lt;50K &amp;lt;100K &amp;lt;400K &amp;gt;400K &amp;lt;30d 30d 40d 45d
+5500          0   1    0    0    0    0    0     0     0     0    0   1   0   0
+     60d &amp;gt;60d Y
+5500   0    0 0
+
+&lt;/pre&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Then the design matrix and response Y are fit using the &lt;strong&gt;&lt;em&gt;logit regression&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[28]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
+&lt;span class="c"&gt;# data needs to be dataframed&lt;/span&gt;
+&lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;46&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;Y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;baseX&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="mi"&gt;47&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="n"&gt;dataLogit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cbind&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# Logit Regression&lt;/span&gt;
+&lt;span class="n"&gt;modelLogit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;glm&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt; &lt;span class="o"&gt;~&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataLogit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;family&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;binomial&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;beta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;modelLogit&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;coef&lt;/span&gt;&lt;span class="p"&gt;[,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;beta&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
+
+&lt;pre&gt;
+     (Intercept)             Film        Community            Music 
+   -2.7360094294    -0.0100895741    -0.0261151541     0.0932471056 
+       Education       Technology           Health &amp;#96;Small Business&amp;#96; 
+   -0.2634446189     0.4542413374    -0.0370563188    -0.5842862836 
+         Theater              Art          Writing    &amp;#96;Video / Web&amp;#96; 
+    0.0287134266    -0.1396895084    -0.0170485624     0.1563392114 
+          Gaming          Animals           Sports             Food 
+    0.5063947858    -0.3116265724    -0.3262599551     0.0374058185 
+     Environment           Design          Fashion      Photography 
+   -0.1421087043     0.3883117472     0.0006955807     0.1193417339 
+           Dance            Comic         Religion         Politics 
+   -0.2338027729     0.6905753544    -0.4037869616     0.6250090707 
+           &amp;#96;&amp;lt;5K&amp;#96;           &amp;#96;&amp;lt;10K&amp;#96;           &amp;#96;&amp;lt;20K&amp;#96;           &amp;#96;&amp;lt;30K&amp;#96; 
+    2.9330723523     2.2607837341     2.0191768593     1.6527159067 
+          &amp;#96;&amp;lt;40K&amp;#96;           &amp;#96;&amp;lt;50K&amp;#96;          &amp;#96;&amp;lt;100K&amp;#96;          &amp;#96;&amp;lt;400K&amp;#96; 
+    1.4837071459     1.7436595199     1.3880936920     0.9682265112 
+          &amp;#96;&amp;lt;30d&amp;#96;            &amp;#96;30d&amp;#96;            &amp;#96;40d&amp;#96;            &amp;#96;45d&amp;#96; 
+    0.0109125505    -0.0416389270    -0.1613095486    -0.4157736893 
+           &amp;#96;60d&amp;#96; 
+   -0.6786081986 
+
+&lt;/pre&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Using this estimated beta/coefficients, predictive functin is constructed for the &lt;strong&gt;&lt;em&gt;success probability advice&lt;/em&gt;&lt;/strong&gt;. The model takes the indexed group to indicate the target and duration desires.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[29]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;#####################  logit model #####################&lt;/span&gt;
+
+&lt;span class="c"&gt;# Generalized Function use:&lt;/span&gt;
+
+&lt;span class="c"&gt;# category to choose from (Film = 1 ~ Comic = 23):&lt;/span&gt;
+&lt;span class="c"&gt;# [1] &amp;quot;Film&amp;quot;           &amp;quot;Community&amp;quot;      &amp;quot;Music&amp;quot;          &amp;quot;Education&amp;quot;     &lt;/span&gt;
+&lt;span class="c"&gt;# [5] &amp;quot;Health&amp;quot;         &amp;quot;Small Business&amp;quot; &amp;quot;Technology&amp;quot;     &amp;quot;Theater&amp;quot;       &lt;/span&gt;
+&lt;span class="c"&gt;# [9] &amp;quot;Art&amp;quot;            &amp;quot;Sports&amp;quot;         &amp;quot;Writing&amp;quot;        &amp;quot;Animals&amp;quot;       &lt;/span&gt;
+&lt;span class="c"&gt;# [13] &amp;quot;Video / Web&amp;quot;    &amp;quot;Food&amp;quot;           &amp;quot;Environment&amp;quot;    &amp;quot;Religion&amp;quot;      &lt;/span&gt;
+&lt;span class="c"&gt;# [17] &amp;quot;Dance&amp;quot;          &amp;quot;Gaming&amp;quot;         &amp;quot;Fashion&amp;quot;        &amp;quot;Photography&amp;quot;   &lt;/span&gt;
+&lt;span class="c"&gt;# [21] &amp;quot;Design&amp;quot;         &amp;quot;Politics&amp;quot;       &amp;quot;Comic&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;# target fund-raising amount to choose from (column number):&lt;/span&gt;
+&lt;span class="c"&gt;#      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]   [,8]&lt;/span&gt;
+&lt;span class="c"&gt;# [1,]    0  5000 10000 20000 30000 40000 50000  100000&lt;/span&gt;
+&lt;span class="c"&gt;# [2,] 5000 10000 20000 30000 40000 50000 100000 400000&lt;/span&gt;
+
+&lt;span class="c"&gt;# fundraising campaign duration to choose from(column number):&lt;/span&gt;
+&lt;span class="c"&gt;#       [,1] [,2] [,3] [,4] [,5]&lt;/span&gt;
+&lt;span class="c"&gt;# [1,]  &amp;lt;30   30   40   45   60 &lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[32]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
+&lt;span class="c"&gt;# The model&lt;/span&gt;
+
+&lt;span class="n"&gt;predict&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;duration&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+  &lt;span class="n"&gt;predicX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;rep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;36&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+  &lt;span class="n"&gt;catName&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;catName&lt;/span&gt; &lt;span class="c"&gt;# 1:24&lt;/span&gt;
+  &lt;span class="n"&gt;beta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;beta&lt;/span&gt;
+  &lt;span class="c"&gt;# assign industry category&lt;/span&gt;
+  &lt;span class="n"&gt;catN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;catName&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+  &lt;span class="n"&gt;predicX&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;catN&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+  &lt;span class="c"&gt;# assign target amount&lt;/span&gt;
+  &lt;span class="n"&gt;targetN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt;
+  &lt;span class="n"&gt;predicX&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;targetN&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+  &lt;span class="c"&gt;# assign duration&lt;/span&gt;
+  &lt;span class="n"&gt;durationN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;duration&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;32&lt;/span&gt;
+  &lt;span class="n"&gt;predicX&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;durationN&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+  &lt;span class="n"&gt;predicY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;predicX&lt;/span&gt; &lt;span class="o"&gt;%*%&lt;/span&gt; &lt;span class="n"&gt;beta&lt;/span&gt;
+  &lt;span class="n"&gt;successP&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;plogis&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;predicY&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;successP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -2208,19 +2681,53 @@ In&amp;nbsp;[]:
 
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;In this notebook, you'll perform the actual analysis of the data stored in the directory&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;./data/cleaned&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If the data is not ready yet (e.g. the other members of the team in charge of cleaning the data are not done yet), you may want to simulate cleaned data in the form you want them to be in order to perform the analysis. This may also help you data cleaning team to come up with the rigth data frame. If you choose to do so, store your simulated data into the directory&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;./data/simulated&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Having performed analysis of simulated data may help you with the analysis of the actual data, since you will be able to notice deviations between the real and simulated data, which may be worth explaining and investigating further.&lt;/p&gt;
-&lt;p&gt;The graphics your going to produce as a result of your analysis should be store in the directory:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;./visualization&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Cleaning</title><link href="https://rkawauchi.github.io/SmartGoal/nb2.html" rel="alternate"></link><updated>2014-03-02T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-02:SmartGoal/nb2.html</id><summary type="html">&lt;p&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;strong&gt;SUMARRY:&lt;/strong&gt; Over 10,000 fund raising projects were downloaded from Indiegogo.com for duration and fund raising sucess analysis. To ensure that the analysis are done properly, we diagnosed the data, cleaned the data so that proper functions can run, and removed anomalities and changed the class/mode of data. The data cleaning strengthens the credibility of our analysis conclusions, yet careful cleaning judgement is also critical as we do not want to remove the data thinking they were anomalities even though they actually are telling the true data structures.&lt;/p&gt;
+&lt;p&gt;The model predicts the &lt;strong&gt;&lt;em&gt;probability of a success for the fundrasing campaign in Technology industry, targeting to raise somewhere US5,000 with a duration selection of 30 days as about 65%&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[33]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;predict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Technology&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="vbox output_wrapper"&gt;
+&lt;div class="output vbox"&gt;
+
+
+&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+
+
+&lt;pre&gt;
+          [,1]
+[1,] 0.6478645
+
+&lt;/pre&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Data-Check"&gt;Data Check&lt;a class="anchor-link" href="#Data-Check"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="team-member-responsible-for-this-notebook"&gt;Team member responsible for this notebook:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: Analyzed and visualized the holistic data structure, and developed Best Duration and Success Probability models&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Cleaning</title><link href="https://rkawauchi.github.io/SmartGoal/nb2.html" rel="alternate"></link><updated>2014-03-02T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-02:SmartGoal/nb2.html</id><summary type="html">&lt;p&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;strong&gt;SUMARRY:&lt;/strong&gt; Over 10,000 fundraising projects were collected from Indiegogo.com for duration and fund raising sucess analysis. To ensure that the analysis are done properly, we diagnosed the data, cleaned the data so that proper functions can run, and removed anomalities and changed the class/mode of data. The data cleaning strengthens the credibility of our analysis conclusions, yet careful cleaning judgement is also critical as we do not want to remove the data thinking they were anomalities even though they actually are telling the true data structures.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="I.-Diagnosis---Data-Check"&gt;I. Diagnosis - Data Check&lt;a class="anchor-link" href="#I.-Diagnosis---Data-Check"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
 
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -2245,7 +2752,7 @@ In&amp;nbsp;[2]:
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[22]:
+In&amp;nbsp;[3]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
@@ -2307,11 +2814,11 @@ In&amp;nbsp;[22]:
 
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Data-Cleaning"&gt;Data Cleaning&lt;a class="anchor-link" href="#Data-Cleaning"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="II.-Data-Cleaning"&gt;II. Data Cleaning&lt;a class="anchor-link" href="#II.-Data-Cleaning"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
 
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Filter-Currency:"&gt;Filter Currency:&lt;a class="anchor-link" href="#Filter-Currency:"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="1.-Filter-Currency:"&gt;1. Filter Currency:&lt;a class="anchor-link" href="#1.-Filter-Currency:"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -2387,7 +2894,7 @@ In&amp;nbsp;[23]:
 
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Filter-Anomalities:"&gt;Filter Anomalities:&lt;a class="anchor-link" href="#Filter-Anomalities:"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="2.-Filter-Anomalities:"&gt;2. Filter Anomalities:&lt;a class="anchor-link" href="#2.-Filter-Anomalities:"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -2546,9 +3053,12 @@ In&amp;nbsp;[36]:
 
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Change-Mode-and-Save:"&gt;Change Mode and Save:&lt;a class="anchor-link" href="#Change-Mode-and-Save:"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="3.-Change-Mode-and-Save:"&gt;3. Change Mode and Save:&lt;a class="anchor-link" href="#3.-Change-Mode-and-Save:"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Now the data is clean and to be saved for the future use.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
@@ -2569,19 +3079,25 @@ In&amp;nbsp;[38]:
 
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;perform visual exploration&lt;/strong&gt; on your data variables to detect anomalies, errors, outliers, interesting features etc.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;clean categorical and quantitative variables&lt;/strong&gt; (by removing observations and variables with too many missing values, by consolidating categorical variables, by selecting an appropriate subset of variables and observations for later analysis, etc.)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;save the cleaned data&lt;/strong&gt; into csv files in the &lt;code&gt;./data/cleaned&lt;/code&gt; directory&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;save interesting graphics&lt;/strong&gt; you obtained during visual exploration into the &lt;code&gt;./visualiation&lt;/code&gt; directory&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="team-member-responsible-for-this-notebook"&gt;Team member responsible for this notebook:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Rie Kawauchi&lt;/strong&gt;: analyzed the general data structure, changed the data mode/class from characters to factors/numerics, and removed unwanted characters and corrupted data&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Gathering</title><link href="https://rkawauchi.github.io/SmartGoal/nb1.html" rel="alternate"></link><updated>2014-03-01T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-03-01:SmartGoal/nb1.html</id><summary type="html">&lt;p&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="Data-Gathering-from-Indiegogo.com"&gt;Data Gathering from Indiegogo.com&lt;a class="anchor-link" href="#Data-Gathering-from-Indiegogo.com"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;From indiegogo website, we can find pages that have a list of cells for different campaigns. These cells have only part of the information about the campaign. Therefore, if we want to know more details about the project, we have to go into its individual page. After clicking on one cell, we will be directed into the campaign page that has all the informaiton we want about the project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;With this in mind, out data scraping code will be divided into two parts. The first part would be mainly responsible for scraping a list of URLs of individual campaign pages. The second part would be in charege of scraping the specific information we want from each campaign page by using the url for each campaign.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="First-Part---A-list-of-URLs"&gt;First Part - A list of URLs&lt;a class="anchor-link" href="#First-Part---A-list-of-URLs"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
@@ -2589,6 +3105,79 @@ In&amp;nbsp;[]:
 &lt;/div&gt;
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bs4&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;
+
+&lt;span class="n"&gt;indiegogo_baseurl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;http://www.indiegogo.com&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;# We would like to know if there were actually 13,000 campaigns that we can scrape the information from&lt;/span&gt;
+&lt;span class="c"&gt;# What we do here is we use &amp;quot;status_code&amp;quot; attribute of a requests.get() object to determine if &lt;/span&gt;
+&lt;span class="c"&gt;# infiegogo website actually has the amount of data we set (In our case, we set the number as 13,000.)&lt;/span&gt;
+
+&lt;span class="n"&gt;count_pgnum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;pgnum&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;13000&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;proj_list_page_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;indiegogo_baseurl&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/explore?filter_browse_balance=true&amp;amp;filter_category=&amp;amp;filter_city=&amp;amp;filter_country=CTRY_US&amp;amp;filter_funding=&amp;amp;filter_percent_funded=&amp;amp;filter_quick=popular_all&amp;amp;filter_status=&amp;amp;filter_title=&amp;amp;per_page={0}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pgnum&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;    
+
+    &lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;proj_list_page_url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;status_code&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 
+        &lt;span class="n"&gt;count_pgnum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pgnum&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt; 
+
+&lt;span class="c"&gt;# Now, count_pgnum is set to a certain number that will be used as pgnum for scraping a list of URLs &lt;/span&gt;
+
+&lt;span class="n"&gt;project_links&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="c"&gt;# global list of links&lt;/span&gt;
+
+&lt;span class="n"&gt;pgnum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;count_pgnum&lt;/span&gt;
+
+&lt;span class="c"&gt;# construct url&lt;/span&gt;
+&lt;span class="n"&gt;project_list_page_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;indiegogo_baseurl&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/explore?filter_browse_balance=true&amp;amp;filter_category=&amp;amp;filter_city=&amp;amp;filter_country=CTRY_US&amp;amp;filter_funding=&amp;amp;filter_percent_funded=&amp;amp;filter_quick=popular_all&amp;amp;filter_status=&amp;amp;filter_title=&amp;amp;per_page={0}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pgnum&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# send GET request to the website server (Indiegogo.com)&lt;/span&gt;
+&lt;span class="n"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;project_list_page_url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# check if request was successful&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;status_code&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;There was an error!&amp;#39;&lt;/span&gt;
+
+&lt;span class="c"&gt;# retrieve HTML string from content of response&lt;/span&gt;
+&lt;span class="n"&gt;html&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;
+
+&lt;span class="c"&gt;# construct soup object&lt;/span&gt;
+&lt;span class="n"&gt;soup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# The url of the individual campaign is stored in &amp;lt;a&amp;gt; tag for example: &amp;lt;a href=&amp;quot;/projects/solar-roadways&amp;quot; class=&amp;quot;i-project&amp;quot;&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;# Since the information we want is the value of href, we search the index with &amp;#39;href&amp;#39; to get the URL of the project page &lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findAll&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;class&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;i-project&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}):&lt;/span&gt;
+    &lt;span class="n"&gt;link_suffix&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;href&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;full_link&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;indiegogo_baseurl&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;link_suffix&lt;/span&gt; &lt;span class="c"&gt;# construct the full link&lt;/span&gt;
+    &lt;span class="n"&gt;project_links&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;full_link&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# add full link to our global list&lt;/span&gt;
+        
+&lt;span class="c"&gt;# save links to a file so we don&amp;#39;t have to run this code again&lt;/span&gt;
+&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dump&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;project_links&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;links.json&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Unfortunately, Indiegogo had changed its website's security level, which means no matter how hard we try, we can only retrieve 120 data at once. So the code we provided above is not working anymore. However, we had already scraped a list of URLs for 13,000 campaigns, which means we have the access to get more details about the project and we are able to move on to data analysis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Second-Part---Scrape-Information-from-Each-Campaign"&gt;Second Part - Scrape Information from Each Campaign&lt;a class="anchor-link" href="#Second-Part---Scrape-Information-from-Each-Campaign"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class="cell border-box-sizing code_cell vbox"&gt;
+&lt;div class="input hbox"&gt;
+&lt;div class="prompt input_prompt"&gt;
+In&amp;nbsp;[]:
+&lt;/div&gt;
+&lt;div class="input_area box-flex1"&gt;
+&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;#Import all of the modules we need  &lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;requests&lt;/span&gt; 
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;json&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;codecs&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;
@@ -2605,16 +3194,21 @@ In&amp;nbsp;[]:
     &lt;span class="n"&gt;html&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;response&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;
     &lt;span class="n"&gt;soup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-    &lt;span class="c"&gt;# location&lt;/span&gt;
+    &lt;span class="c"&gt;# To scrape information about location&lt;/span&gt;
     &lt;span class="n"&gt;span_element&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findAll&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;span&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;class&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;i-keep-it-together&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;span_element&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;span_element&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-        &lt;span class="n"&gt;data_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;location&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt;
+        &lt;span class="n"&gt;data_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;location&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;location&lt;/span&gt; &lt;span class="c"&gt;# Save the location information into the data dictionary&lt;/span&gt;
     &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;data_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;location&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;None&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;data_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;location&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;None&amp;#39;&lt;/span&gt; &lt;span class="c"&gt;# Send the string &amp;#39;None&amp;#39; to the dictionary if there was no location information&lt;/span&gt;
 
-    &lt;span class="c"&gt;# category&lt;/span&gt;
+    &lt;span class="c"&gt;# To scrape information about category&lt;/span&gt;
     &lt;span class="n"&gt;span_element&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findAll&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;span&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;class&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;i-keep-it-together&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+    
+    &lt;span class="c"&gt;# The span_element is a list and normally will contain the information of location and category &lt;/span&gt;
+    &lt;span class="c"&gt;# However, somehow some projects they don&amp;#39;t have any lication information shown&lt;/span&gt;
+    &lt;span class="c"&gt;# What we do below is to check the length of the list to make sure the information we get is about the category&lt;/span&gt;
+    
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;span_element&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;category&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;span_element&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
         &lt;span class="n"&gt;data_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;category&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;category&lt;/span&gt;
@@ -2624,24 +3218,24 @@ In&amp;nbsp;[]:
 
     &lt;span class="c"&gt;# funding duration&lt;/span&gt;
     &lt;span class="n"&gt;div_element&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;div&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;class&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;i-time-left&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;div_element&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;?&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;data_dict&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;div_element&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;?&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c"&gt;# Some projects have &amp;#39;?&amp;#39; sign for how many days left&lt;/span&gt;
+        &lt;span class="n"&gt;data_dict&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt; 
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;data_dict&lt;/span&gt;
 
-    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;div_element&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;div_element&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c"&gt;# This means 0 days left, which means the project is done its fund raising&lt;/span&gt;
         &lt;span class="n"&gt;paragraph&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;div&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;class&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;i-funding-duration&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
         &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;
         &lt;span class="n"&gt;dates&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;paragraph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
         
-        &lt;span class="n"&gt;start_date&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;{0},{1},{2}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-        &lt;span class="n"&gt;end_date&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;{0},{1},{2}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+        &lt;span class="n"&gt;start_date&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;{0},{1},{2}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="c"&gt;# Get start date as string&lt;/span&gt;
+        &lt;span class="n"&gt;end_date&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;{0},{1},{2}&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dates&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="c"&gt;# Gest end date as string&lt;/span&gt;
          
-        &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strptime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;start_date&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;%b,&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s"&gt;,%Y&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;after&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strptime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;end_date&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;%B,&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s"&gt;,%Y&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;after&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;before&lt;/span&gt;
+        &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strptime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;start_date&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;%b,&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s"&gt;,%Y&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# Change start date to datetime object&lt;/span&gt;
+        &lt;span class="n"&gt;after&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strptime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;end_date&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;%B,&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s"&gt;,%Y&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# Change end date to datetime object&lt;/span&gt;
+        &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;after&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;before&lt;/span&gt; &lt;span class="c"&gt;# Calculate the duration between start date and end date&lt;/span&gt;
         &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;days&lt;/span&gt;
         &lt;span class="n"&gt;data_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;duration&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;days&lt;/span&gt;
-    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c"&gt;# Incomplete projects&lt;/span&gt;
         &lt;span class="n"&gt;paragraph&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;soup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;div&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;class&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;i-funding-duration&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
         &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;
         &lt;span class="n"&gt;dates&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;paragraph&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
@@ -2661,11 +3255,7 @@ In&amp;nbsp;[]:
         &lt;span class="n"&gt;money_string&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;span_element&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;
     &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;money_string&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;span_element&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;span_element&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-    &lt;span class="c"&gt;#money = &amp;#39;&amp;#39;&lt;/span&gt;
-    &lt;span class="c"&gt;#for character in money_string:&lt;/span&gt;
-    &lt;span class="c"&gt;#    if character.isdigit():&lt;/span&gt;
-    &lt;span class="c"&gt;#        money = money + character&lt;/span&gt;
-    &lt;span class="c"&gt;#money = int(money)&lt;/span&gt;
+   
     &lt;span class="n"&gt;data_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;amount_raised&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;money_string&lt;/span&gt;
     
     &lt;span class="c"&gt;# goal of raising&lt;/span&gt;
@@ -2680,525 +3270,26 @@ In&amp;nbsp;[]:
     
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;data_dict&lt;/span&gt;
 
-&lt;span class="n"&gt;links&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;links.json&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;indiegogo_Ray.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;u&amp;#39;location,category,duration,amount_raised,raising_goal,percent&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;links&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parse_page&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;links&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;links.json&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="c"&gt;# Open links.json that contains all the URLs of projects&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;indiegogo.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# Create a file called indiegogo.csv and write&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;u&amp;#39;location,category,duration,amount_raised,raising_goal,percent&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# Write the column names into indiegogo.csb&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;links&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="c"&gt;# Pick one URL from links.json&lt;/span&gt;
+    &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parse_page&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c"&gt;# Put the URL taken as an argument of parse_page function&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
         &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;u&amp;#39;{location},{category},{duration},{amount_raised},{raising_goal},{percent}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;utf-8&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;replace&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;In this notebook, you'll&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;create the directory structure for your project&lt;/li&gt;
-&lt;li&gt;download the raw data for your project&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;write functions and classes to transform raw data (e.g in XML, jason, etc.) into data frames&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;explain what your are doing&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="team-members-responsible-for-this-notebook"&gt;Team members responsible for this notebook:&lt;/h2&gt;
-&lt;p&gt;List the team members contributing to this notebook, along with their responsabilities:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;team member 1 &lt;strong&gt;name&lt;/strong&gt;: team member 1 &lt;strong&gt;responsabilities&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;team member 2 &lt;strong&gt;name&lt;/strong&gt;: team member 2 &lt;strong&gt;responsabilities&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Po Jui Chiu&lt;/strong&gt;: Scrape the data we want from indiegogo website and simultaneously perform a preliminary data cleaning on it&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I advise you to work at least in pairs for each project notebook, as you did for the homework assignments. Of course, all team members may participate to each notebook.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="instructions"&gt;Instructions:&lt;/h2&gt;
-&lt;p&gt;In &lt;strong&gt;markdown cells&lt;/strong&gt;, you'll&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;list and describe the data sources for your class project
-&lt;ul&gt;
-&lt;li&gt;provide the data urls&lt;/li&gt;
-&lt;li&gt;describe the file formats&lt;/li&gt;
-&lt;li&gt;explain the data content of each file&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Remark:&lt;/strong&gt; If your data is not directly available through the web (for instance, you requested it from a company, or got it from Inna or Henry), place you data into your personal bdrive, and provide a link to it, that you'll use in this notebook to download it into the data folder, as explained below).&lt;/p&gt;
-&lt;p&gt;In &lt;strong&gt;code cells&lt;/strong&gt;, you'll&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;create the following directories:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;./data
-./data/raw        # to store your raw data
-./data/cleaned    # to store the cleanned data
-./data/simulated  # to store simulated data
-./visualizations  # to store your plots&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;display samples of your data files (e.g. for a csv files, use data frames and the &lt;code&gt;head&lt;/code&gt; method)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Write &lt;strong&gt;scripts&lt;/strong&gt; into the &lt;code&gt;./script&lt;/code&gt; directory using the he &lt;strong&gt;magic command&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;%%file ./script/file_name&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Your scripts should contain &lt;strong&gt;functions&lt;/strong&gt; and &lt;strong&gt;objects&lt;/strong&gt; allowing you to&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;download the actual raw data in the directory &lt;code&gt;./data/raw&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;load the downloaded the raw data files into data frames&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This way, the functions and objects contained in your scripts will be accessible in other notebooks through the &lt;code&gt;import&lt;/code&gt; command in Python (see example below).&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Remark 1:&lt;/strong&gt; In the code cells, you may use Python, R, or Bash, as you find more convenient.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Remark 2:&lt;/strong&gt; Try to make your notebook as readable and usable (by others) as possible.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Example"&gt;Example&lt;a class="anchor-link" href="#Example"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Here is an example of how to package your code into scripts reusable in other notebook.&lt;/p&gt;
-&lt;p&gt;You'll need to do something similar to that. You'll also need to write explanations as outlined above in markdown cells.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="creating-the-directory-structure"&gt;Creating the directory structure&lt;/h3&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[2]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;bash&lt;/span&gt;
-&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="o"&gt;../&lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt; &lt;span class="o"&gt;../&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;../&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;raw&lt;/span&gt; &lt;span class="o"&gt;../&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cleaned&lt;/span&gt; &lt;span class="o"&gt;../&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;simulated&lt;/span&gt; &lt;span class="o"&gt;../&lt;/span&gt;&lt;span class="n"&gt;visualizations&lt;/span&gt;
-&lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
-&lt;pre&gt;
-visualizations
-script
-README.md
-NB4_project_report.ipynb
-NB3_data_analysis.ipynb
-NB2_data_cleaning.ipynb
-NB1_data_gathering.ipynb
-data
-
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_stream output_stderr"&gt;
-&lt;pre&gt;
-mkdir: cannot create directory ‘../data’: File exists
-
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Downloading-and-displaying-raw-data"&gt;Downloading and displaying raw data&lt;a class="anchor-link" href="#Downloading-and-displaying-raw-data"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;In this example, I am using R. You want to use Python instead.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[4]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;load_ext&lt;/span&gt; &lt;span class="n"&gt;rmagic&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;strong&gt;TO DO:&lt;/strong&gt; list sources, display data sample, explain data content, etc.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;We now download an XML source containing plant data, and display an typical plant entry, represented as a XML node:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[6]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="n"&gt;library&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;XML&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plant_url&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="s"&gt;&amp;#39;http://www.stat.berkeley.edu/classes/s133/data/plant_catalog.xml&amp;#39;&lt;/span&gt;
-&lt;span class="n"&gt;plant_file&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;./data/raw/plant.xml&amp;#39;&lt;/span&gt;
-
-&lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;plant_file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;method&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;curl&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;xml_doc&lt;/span&gt;   &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;xmlParse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;root_node&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;xmlRoot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xml_doc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;plant_nodes&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;xmlChildren&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root_node&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_nodes&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
-&lt;pre&gt;
-
-Attaching package: ‘XML’
-
-The following object(s) are masked from ‘package:tools’:
-
-    toHTML
-
-&amp;lt;PLANT&amp;gt;
-  &amp;lt;COMMON&amp;gt;Bloodroot&amp;lt;/COMMON&amp;gt;
-  &amp;lt;BOTANICAL&amp;gt;Sanguinaria canadensis&amp;lt;/BOTANICAL&amp;gt;
-  &amp;lt;ZONE&amp;gt;4&amp;lt;/ZONE&amp;gt;
-  &amp;lt;LIGHT&amp;gt;Mostly Shady&amp;lt;/LIGHT&amp;gt;
-  &amp;lt;PRICE&amp;gt;$2.44&amp;lt;/PRICE&amp;gt;
-  &amp;lt;AVAILABILITY&amp;gt;031599&amp;lt;/AVAILABILITY&amp;gt;
-&amp;lt;/PLANT&amp;gt; 
-
-&lt;/pre&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Loading-raw-data-into-data-frames"&gt;Loading raw data into data frames&lt;a class="anchor-link" href="#Loading-raw-data-into-data-frames"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;The dataframe column labels are the tags of the XML nodes, contained in the plant XML nodes:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[7]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="n"&gt;column_names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_nodes&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
-&lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;column_names&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
-&lt;pre&gt;
-COMMON BOTANICAL ZONE LIGHT PRICE AVAILABILITY
-&lt;/pre&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Given a column name, we create a data frame column containing the column values:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[11]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="n"&gt;common_tag&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;column_names&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="n"&gt;get_value&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_node&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;xmlValue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_node&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
-    
-&lt;span class="n"&gt;common_column&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sapply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_nodes&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;get_value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;common_tag&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    
-&lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;common_column&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
-&lt;pre&gt;
-Bloodroot Columbine Marsh Marigold Cowslip Dutchman&amp;apos;s-Breeches Ginger, Wild Hepatica Liverleaf Jack-In-The-Pulpit Mayapple Phlox, Woodland Phlox, Blue Spring-Beauty Trillium Wake Robin Violet, Dog-Tooth Trout Lily Adder&amp;apos;s-Tongue Anemone Grecian Windflower Bee Balm Bergamot Black-Eyed Susan Buttercup Crowfoot Butterfly Weed Cinquefoil Primrose Gentian Blue Gentian Jacob&amp;apos;s Ladder Greek Valerian California Poppy Shooting Star Snakeroot Cardinal Flower
-&lt;/pre&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;We package the code above into a function that creates the data frame column corresponding from a tag name and a list of plant nodes:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[12]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="n"&gt;get_column&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;plants&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;sapply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plants&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;get_value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    
-&lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;get_column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;COMMON&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;plant_nodes&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
-&lt;pre&gt;
-Bloodroot Columbine Marsh Marigold Cowslip Dutchman&amp;apos;s-Breeches Ginger, Wild Hepatica Liverleaf Jack-In-The-Pulpit Mayapple Phlox, Woodland Phlox, Blue Spring-Beauty Trillium Wake Robin Violet, Dog-Tooth Trout Lily Adder&amp;apos;s-Tongue Anemone Grecian Windflower Bee Balm Bergamot Black-Eyed Susan Buttercup Crowfoot Butterfly Weed Cinquefoil Primrose Gentian Blue Gentian Jacob&amp;apos;s Ladder Greek Valerian California Poppy Shooting Star Snakeroot Cardinal Flower
-&lt;/pre&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;We are now ready to retrieve all the columns of our data frame into a list of vectors, which we will use to construct our data frame:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[13]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;lapply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;column_names&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;get_column&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;plant_nodes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;plant_df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;frame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stringsAsFactors&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FALSE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_df&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
-&lt;pre&gt;
-               COMMON              BOTANICAL ZONE        LIGHT PRICE
-1           Bloodroot Sanguinaria canadensis    4 Mostly Shady $2.44
-2           Columbine   Aquilegia canadensis    3 Mostly Shady $9.37
-3      Marsh Marigold       Caltha palustris    4 Mostly Sunny $6.81
-4             Cowslip       Caltha palustris    4 Mostly Shady $9.90
-5 Dutchman&amp;apos;s-Breeches    Dicentra cucullaria    3 Mostly Shady $6.44
-6        Ginger, Wild       Asarum canadense    3 Mostly Shady $9.03
-  AVAILABILITY
-1       031599
-2       030699
-3       051799
-4       030699
-5       012099
-6       041899
-
-&lt;/pre&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Using the data frame we just created, we save the plant data into a csv file into the raw data directory:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[14]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;./data/raw/plants_to_be_cleaned.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;!&lt;/span&gt;head ./data/raw/plants_to_be_cleaned.csv
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Packaging-the-gathering-code-into-reusable-functions"&gt;Packaging the gathering code into reusable functions&lt;a class="anchor-link" href="#Packaging-the-gathering-code-into-reusable-functions"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[15]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;file&lt;/span&gt; &lt;span class="o"&gt;./&lt;/span&gt;&lt;span class="n"&gt;script&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;plant_df&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;
-
-&lt;span class="n"&gt;get_value&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_node&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;xmlValue&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_node&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
-    
-&lt;span class="n"&gt;get_column&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;plants&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;sapply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plants&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;get_value&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tag&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    
-&lt;span class="n"&gt;create_df_from_plant_xml&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_file&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-    &lt;span class="n"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;XML&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;xml_doc&lt;/span&gt;      &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;xmlParse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;root_node&lt;/span&gt;    &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;xmlRoot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;xml_doc&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;plant_nodes&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;xmlChildren&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;root_node&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;column_names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_nodes&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
-
-    &lt;span class="n"&gt;data&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;lapply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;column_names&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;get_column&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;plant_nodes&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;frame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stringsAsFactors&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;FALSE&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
-&lt;pre&gt;
-Writing ./script/plant_df-R
-
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Now, our function converting a raw plant XML file into a R data frame can be used in other notebooks, using the &lt;code&gt;source&lt;/code&gt; command:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[16]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;R&lt;/span&gt;
-&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;./script/plant_df-R&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;create_df_from_plant_xml&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;plant_file&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
-
-
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
-
-
-&lt;pre&gt;
-               COMMON              BOTANICAL ZONE        LIGHT PRICE
-1           Bloodroot Sanguinaria canadensis    4 Mostly Shady $2.44
-2           Columbine   Aquilegia canadensis    3 Mostly Shady $9.37
-3      Marsh Marigold       Caltha palustris    4 Mostly Sunny $6.81
-4             Cowslip       Caltha palustris    4 Mostly Shady $9.90
-5 Dutchman&amp;apos;s-Breeches    Dicentra cucullaria    3 Mostly Shady $6.44
-6        Ginger, Wild       Asarum canadense    3 Mostly Shady $9.03
-  AVAILABILITY
-1       031599
-2       030699
-3       051799
-4       030699
-5       012099
-6       041899
-
-&lt;/pre&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
 &lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Reproducibility</title><link href="https://rkawauchi.github.io/SmartGoal/reproducibility.html" rel="alternate"></link><updated>2014-02-28T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:rkawauchi.github.io,2014-02-28:SmartGoal/reproducibility.html</id><summary type="html">&lt;h1&gt;Reproducibility&lt;/h1&gt;
 &lt;h2&gt;Virtual OskiBox&lt;/h2&gt;
 &lt;h2&gt;Software Requirements&lt;/h2&gt;</summary></entry></feed>

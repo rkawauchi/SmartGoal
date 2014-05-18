@@ -1720,7 +1720,7 @@ init_mathjax();
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Data Gathering"/>
             <meta property="og:url" content="https://rkawauchi.github.io/SmartGoal/nb1.html"/>
-            <meta property="og:description" content="In []: import requests import json import codecs from datetime import datetime from bs4 import BeautifulSoup def parse_page(link): data_dict = {} response = requests.get(link) if response.status_code != 200: print 'Error for link: {0}'.format(link) return data_dict html = response.content soup = BeautifulSoup(html) # location span_element = soup.findAll('span', {'class': 'i-keep-it-together'}) if ..."/>
+            <meta property="og:description" content="Data Gathering from Indiegogo.com¶ From indiegogo website, we can find pages that have a list of cells for different campaigns. These cells have only part of the information about the campaign. Therefore, if we want to know more details about the project, we have to go into its individual ..."/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://rkawauchi.github.io/SmartGoal/theme/css/bootstrap.min.css" type="text/css"/>
@@ -1814,6 +1814,20 @@ SmartGoal            </a>
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Data-Gathering-from-Indiegogo.com">Data Gathering from Indiegogo.com<a class="anchor-link" href="#Data-Gathering-from-Indiegogo.com">&#182;</a></h1>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From indiegogo website, we can find pages that have a list of cells for different campaigns. These cells have only part of the information about the campaign. Therefore, if we want to know more details about the project, we have to go into its individual page. After clicking on one cell, we will be directed into the campaign page that has all the informaiton we want about the project.</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>With this in mind, out data scraping code will be divided into two parts. The first part would be mainly responsible for scraping a list of URLs of individual campaign pages. The second part would be in charege of scraping the specific information we want from each campaign page by using the url for each campaign.</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="First-Part---A-list-of-URLs">First Part - A list of URLs<a class="anchor-link" href="#First-Part---A-list-of-URLs">&#182;</a></h2>
+</div>
+
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -1821,6 +1835,79 @@ In&nbsp;[]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="n">indiegogo_baseurl</span> <span class="o">=</span> <span class="s">&#39;http://www.indiegogo.com&#39;</span>
+
+<span class="c"># We would like to know if there were actually 13,000 campaigns that we can scrape the information from</span>
+<span class="c"># What we do here is we use &quot;status_code&quot; attribute of a requests.get() object to determine if </span>
+<span class="c"># infiegogo website actually has the amount of data we set (In our case, we set the number as 13,000.)</span>
+
+<span class="n">count_pgnum</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">pgnum</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13000</span><span class="p">):</span>
+    <span class="n">proj_list_page_url</span> <span class="o">=</span> <span class="n">indiegogo_baseurl</span> <span class="o">+</span> <span class="s">&#39;/explore?filter_browse_balance=true&amp;filter_category=&amp;filter_city=&amp;filter_country=CTRY_US&amp;filter_funding=&amp;filter_percent_funded=&amp;filter_quick=popular_all&amp;filter_status=&amp;filter_title=&amp;per_page={0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pgnum</span><span class="p">)</span>    
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">proj_list_page_url</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">response</span>
+    <span class="k">else</span><span class="p">:</span> 
+        <span class="n">count_pgnum</span> <span class="o">=</span> <span class="n">pgnum</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">break</span> 
+
+<span class="c"># Now, count_pgnum is set to a certain number that will be used as pgnum for scraping a list of URLs </span>
+
+<span class="n">project_links</span> <span class="o">=</span> <span class="p">[]</span> <span class="c"># global list of links</span>
+
+<span class="n">pgnum</span> <span class="o">=</span> <span class="n">count_pgnum</span>
+
+<span class="c"># construct url</span>
+<span class="n">project_list_page_url</span> <span class="o">=</span> <span class="n">indiegogo_baseurl</span> <span class="o">+</span> <span class="s">&#39;/explore?filter_browse_balance=true&amp;filter_category=&amp;filter_city=&amp;filter_country=CTRY_US&amp;filter_funding=&amp;filter_percent_funded=&amp;filter_quick=popular_all&amp;filter_status=&amp;filter_title=&amp;per_page={0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pgnum</span><span class="p">)</span>
+
+<span class="c"># send GET request to the website server (Indiegogo.com)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">project_list_page_url</span><span class="p">)</span>
+
+<span class="c"># check if request was successful</span>
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&#39;There was an error!&#39;</span>
+
+<span class="c"># retrieve HTML string from content of response</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
+
+<span class="c"># construct soup object</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+<span class="c"># The url of the individual campaign is stored in &lt;a&gt; tag for example: &lt;a href=&quot;/projects/solar-roadways&quot; class=&quot;i-project&quot;&gt;</span>
+<span class="c"># Since the information we want is the value of href, we search the index with &#39;href&#39; to get the URL of the project page </span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;i-project&#39;</span><span class="p">}):</span>
+    <span class="n">link_suffix</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s">&#39;href&#39;</span><span class="p">]</span>
+    <span class="n">full_link</span> <span class="o">=</span> <span class="n">indiegogo_baseurl</span> <span class="o">+</span> <span class="n">link_suffix</span> <span class="c"># construct the full link</span>
+    <span class="n">project_links</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">full_link</span><span class="p">)</span> <span class="c"># add full link to our global list</span>
+        
+<span class="c"># save links to a file so we don&#39;t have to run this code again</span>
+<span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">project_links</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;links.json&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Unfortunately, Indiegogo had changed its website's security level, which means no matter how hard we try, we can only retrieve 120 data at once. So the code we provided above is not working anymore. However, we had already scraped a list of URLs for 13,000 campaigns, which means we have the access to get more details about the project and we are able to move on to data analysis.</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Second-Part---Scrape-Information-from-Each-Campaign">Second Part - Scrape Information from Each Campaign<a class="anchor-link" href="#Second-Part---Scrape-Information-from-Each-Campaign">&#182;</a></h2>
+</div>
+
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c">#Import all of the modules we need  </span>
+<span class="kn">import</span> <span class="nn">requests</span> 
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">codecs</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
@@ -1837,16 +1924,21 @@ In&nbsp;[]:
     <span class="n">html</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
     <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
 
-    <span class="c"># location</span>
+    <span class="c"># To scrape information about location</span>
     <span class="n">span_element</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">&#39;span&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;i-keep-it-together&#39;</span><span class="p">})</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">span_element</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
         <span class="n">location</span> <span class="o">=</span> <span class="n">span_element</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-        <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">location</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">location</span> <span class="c"># Save the location information into the data dictionary</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;None&#39;</span>
+        <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;location&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;None&#39;</span> <span class="c"># Send the string &#39;None&#39; to the dictionary if there was no location information</span>
 
-    <span class="c"># category</span>
+    <span class="c"># To scrape information about category</span>
     <span class="n">span_element</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s">&#39;span&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;i-keep-it-together&#39;</span><span class="p">})</span>
+    
+    <span class="c"># The span_element is a list and normally will contain the information of location and category </span>
+    <span class="c"># However, somehow some projects they don&#39;t have any lication information shown</span>
+    <span class="c"># What we do below is to check the length of the list to make sure the information we get is about the category</span>
+    
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">span_element</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
         <span class="n">category</span> <span class="o">=</span> <span class="n">span_element</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
         <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;category&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">category</span>
@@ -1856,24 +1948,24 @@ In&nbsp;[]:
 
     <span class="c"># funding duration</span>
     <span class="n">div_element</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;div&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;i-time-left&#39;</span><span class="p">})</span>
-    <span class="k">if</span> <span class="n">div_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;?&#39;</span><span class="p">:</span>
-        <span class="n">data_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="n">div_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s">&#39;?&#39;</span><span class="p">:</span> <span class="c"># Some projects have &#39;?&#39; sign for how many days left</span>
+        <span class="n">data_dict</span> <span class="o">=</span> <span class="p">{}</span> 
         <span class="k">return</span> <span class="n">data_dict</span>
 
-    <span class="k">elif</span> <span class="nb">int</span><span class="p">(</span><span class="n">div_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">elif</span> <span class="nb">int</span><span class="p">(</span><span class="n">div_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c"># This means 0 days left, which means the project is done its fund raising</span>
         <span class="n">paragraph</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;div&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;i-funding-duration&#39;</span><span class="p">})</span>
         <span class="n">index</span> <span class="o">=</span> <span class="mi">25</span>
         <span class="n">dates</span> <span class="o">=</span> <span class="n">paragraph</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="n">index</span><span class="p">:]</span>
         
-        <span class="n">start_date</span> <span class="o">=</span> <span class="s">&#39;{0},{1},{2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">7</span><span class="p">])</span>
-        <span class="n">end_date</span> <span class="o">=</span> <span class="s">&#39;{0},{1},{2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">5</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">6</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">7</span><span class="p">])</span>
+        <span class="n">start_date</span> <span class="o">=</span> <span class="s">&#39;{0},{1},{2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">7</span><span class="p">])</span> <span class="c"># Get start date as string</span>
+        <span class="n">end_date</span> <span class="o">=</span> <span class="s">&#39;{0},{1},{2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">5</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">6</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span> <span class="n">dates</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)[</span><span class="mi">7</span><span class="p">])</span> <span class="c"># Gest end date as string</span>
          
-        <span class="n">before</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="s">&#39;%b,</span><span class="si">%d</span><span class="s">,%Y&#39;</span><span class="p">)</span>
-        <span class="n">after</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">end_date</span><span class="p">,</span> <span class="s">&#39;%B,</span><span class="si">%d</span><span class="s">,%Y&#39;</span><span class="p">)</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="n">after</span> <span class="o">-</span> <span class="n">before</span>
+        <span class="n">before</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="s">&#39;%b,</span><span class="si">%d</span><span class="s">,%Y&#39;</span><span class="p">)</span> <span class="c"># Change start date to datetime object</span>
+        <span class="n">after</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">end_date</span><span class="p">,</span> <span class="s">&#39;%B,</span><span class="si">%d</span><span class="s">,%Y&#39;</span><span class="p">)</span> <span class="c"># Change end date to datetime object</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">after</span> <span class="o">-</span> <span class="n">before</span> <span class="c"># Calculate the duration between start date and end date</span>
         <span class="n">c</span><span class="o">.</span><span class="n">days</span>
         <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">days</span>
-    <span class="k">else</span><span class="p">:</span>
+    <span class="k">else</span><span class="p">:</span> <span class="c"># Incomplete projects</span>
         <span class="n">paragraph</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s">&#39;div&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;class&#39;</span><span class="p">:</span> <span class="s">&#39;i-funding-duration&#39;</span><span class="p">})</span>
         <span class="n">index</span> <span class="o">=</span> <span class="mi">25</span>
         <span class="n">dates</span> <span class="o">=</span> <span class="n">paragraph</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="n">index</span><span class="p">:]</span>
@@ -1893,11 +1985,7 @@ In&nbsp;[]:
         <span class="n">money_string</span> <span class="o">=</span> <span class="n">span_element</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">money_string</span> <span class="o">=</span> <span class="n">span_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span><span class="o">+</span><span class="n">span_element</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="c">#money = &#39;&#39;</span>
-    <span class="c">#for character in money_string:</span>
-    <span class="c">#    if character.isdigit():</span>
-    <span class="c">#        money = money + character</span>
-    <span class="c">#money = int(money)</span>
+   
     <span class="n">data_dict</span><span class="p">[</span><span class="s">&#39;amount_raised&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">money_string</span>
     
     <span class="c"># goal of raising</span>
@@ -1912,525 +2000,26 @@ In&nbsp;[]:
     
     <span class="k">return</span> <span class="n">data_dict</span>
 
-<span class="n">links</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">&#39;links.json&#39;</span><span class="p">))</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;indiegogo_Ray.csv&#39;</span><span class="p">,</span><span class="s">&#39;w&#39;</span><span class="p">)</span>
-<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">u&#39;location,category,duration,amount_raised,raising_goal,percent</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">parse_page</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+<span class="n">links</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">&#39;links.json&#39;</span><span class="p">))</span> <span class="c"># Open links.json that contains all the URLs of projects</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;indiegogo.csv&#39;</span><span class="p">,</span><span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="c"># Create a file called indiegogo.csv and write</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">u&#39;location,category,duration,amount_raised,raising_goal,percent</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span> <span class="c"># Write the column names into indiegogo.csb</span>
+<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span> <span class="c"># Pick one URL from links.json</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">parse_page</span><span class="p">(</span><span class="n">link</span><span class="p">)</span> <span class="c"># Put the URL taken as an argument of parse_page function</span>
     <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
         <span class="n">row</span> <span class="o">=</span> <span class="s">u&#39;{location},{category},{duration},{amount_raised},{raising_goal},{percent}</span><span class="se">\n</span><span class="s">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">,</span><span class="s">&#39;replace&#39;</span><span class="p">)</span>
         <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+        
 </pre></div>
 
 </div>
 </div>
 
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In this notebook, you'll</p>
-<ul>
-<li>create the directory structure for your project</li>
-<li>download the raw data for your project</li>
-<li><strong>write functions and classes to transform raw data (e.g in XML, jason, etc.) into data frames</strong></li>
-<li>explain what your are doing</li>
-</ul>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="team-members-responsible-for-this-notebook">Team members responsible for this notebook:</h2>
-<p>List the team members contributing to this notebook, along with their responsabilities:</p>
 <ul>
-<li>team member 1 <strong>name</strong>: team member 1 <strong>responsabilities</strong></li>
-<li>team member 2 <strong>name</strong>: team member 2 <strong>responsabilities</strong></li>
-<li>etc.</li>
+<li><strong>Po Jui Chiu</strong>: Scrape the data we want from indiegogo website and simultaneously perform a preliminary data cleaning on it</li>
 </ul>
-<p>I advise you to work at least in pairs for each project notebook, as you did for the homework assignments. Of course, all team members may participate to each notebook.</p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="instructions">Instructions:</h2>
-<p>In <strong>markdown cells</strong>, you'll</p>
-<ul>
-<li>list and describe the data sources for your class project
-<ul>
-<li>provide the data urls</li>
-<li>describe the file formats</li>
-<li>explain the data content of each file</li>
-</ul></li>
-</ul>
-<p><strong>Remark:</strong> If your data is not directly available through the web (for instance, you requested it from a company, or got it from Inna or Henry), place you data into your personal bdrive, and provide a link to it, that you'll use in this notebook to download it into the data folder, as explained below).</p>
-<p>In <strong>code cells</strong>, you'll</p>
-<ul>
-<li><p>create the following directories:</p>
-<pre><code>./data
-./data/raw        # to store your raw data
-./data/cleaned    # to store the cleanned data
-./data/simulated  # to store simulated data
-./visualizations  # to store your plots</code></pre></li>
-<li><p>display samples of your data files (e.g. for a csv files, use data frames and the <code>head</code> method)</p></li>
-<li><p>Write <strong>scripts</strong> into the <code>./script</code> directory using the he <strong>magic command</strong></p>
-<p>%%file ./script/file_name</p></li>
-</ul>
-<p>Your scripts should contain <strong>functions</strong> and <strong>objects</strong> allowing you to</p>
-<ul>
-<li><p>download the actual raw data in the directory <code>./data/raw</code></p></li>
-<li><p>load the downloaded the raw data files into data frames</p></li>
-</ul>
-<p>This way, the functions and objects contained in your scripts will be accessible in other notebooks through the <code>import</code> command in Python (see example below).</p>
-<p><strong>Remark 1:</strong> In the code cells, you may use Python, R, or Bash, as you find more convenient.</p>
-<p><strong>Remark 2:</strong> Try to make your notebook as readable and usable (by others) as possible.</p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Example">Example<a class="anchor-link" href="#Example">&#182;</a></h2>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here is an example of how to package your code into scripts reusable in other notebook.</p>
-<p>You'll need to do something similar to that. You'll also need to write explanations as outlined above in markdown cells.</p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="creating-the-directory-structure">Creating the directory structure</h3>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[2]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">bash</span>
-<span class="n">mkdir</span> <span class="o">../</span><span class="n">script</span> <span class="o">../</span><span class="n">data</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">raw</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">cleaned</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">simulated</span> <span class="o">../</span><span class="n">visualizations</span>
-<span class="n">ls</span> <span class="o">-</span><span class="n">r</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-visualizations
-script
-README.md
-NB4_project_report.ipynb
-NB3_data_analysis.ipynb
-NB2_data_cleaning.ipynb
-NB1_data_gathering.ipynb
-data
-
-</pre>
-</div>
-</div>
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stderr">
-<pre>
-mkdir: cannot create directory ‘../data’: File exists
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Downloading-and-displaying-raw-data">Downloading and displaying raw data<a class="anchor-link" href="#Downloading-and-displaying-raw-data">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In this example, I am using R. You want to use Python instead.</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[4]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%</span><span class="k">load_ext</span> <span class="n">rmagic</span>
-</pre></div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>TO DO:</strong> list sources, display data sample, explain data content, etc.</p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We now download an XML source containing plant data, and display an typical plant entry, represented as a XML node:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[6]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">library</span><span class="p">(</span><span class="n">XML</span><span class="p">)</span>
-<span class="n">plant_url</span>  <span class="o">=</span>  <span class="s">&#39;http://www.stat.berkeley.edu/classes/s133/data/plant_catalog.xml&#39;</span>
-<span class="n">plant_file</span> <span class="o">=</span> <span class="s">&#39;./data/raw/plant.xml&#39;</span>
-
-<span class="n">download</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">plant_url</span><span class="p">,</span> <span class="n">plant_file</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s">&quot;curl&quot;</span><span class="p">)</span>
-
-<span class="n">xml_doc</span>   <span class="o">=</span> <span class="n">xmlParse</span><span class="p">(</span><span class="n">plant_file</span><span class="p">)</span>
-<span class="n">root_node</span> <span class="o">=</span> <span class="n">xmlRoot</span><span class="p">(</span><span class="n">xml_doc</span><span class="p">)</span>
-
-<span class="n">plant_nodes</span> <span class="o">=</span> <span class="n">xmlChildren</span><span class="p">(</span><span class="n">root_node</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">plant_nodes</span><span class="p">[[</span><span class="mi">1</span><span class="p">]])</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_display_data">
-
-
-<pre>
-
-Attaching package: ‘XML’
-
-The following object(s) are masked from ‘package:tools’:
-
-    toHTML
-
-&lt;PLANT&gt;
-  &lt;COMMON&gt;Bloodroot&lt;/COMMON&gt;
-  &lt;BOTANICAL&gt;Sanguinaria canadensis&lt;/BOTANICAL&gt;
-  &lt;ZONE&gt;4&lt;/ZONE&gt;
-  &lt;LIGHT&gt;Mostly Shady&lt;/LIGHT&gt;
-  &lt;PRICE&gt;$2.44&lt;/PRICE&gt;
-  &lt;AVAILABILITY&gt;031599&lt;/AVAILABILITY&gt;
-&lt;/PLANT&gt; 
-
-</pre>
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Loading-raw-data-into-data-frames">Loading raw data into data frames<a class="anchor-link" href="#Loading-raw-data-into-data-frames">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The dataframe column labels are the tags of the XML nodes, contained in the plant XML nodes:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[7]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">column_names</span> <span class="o">=</span> <span class="n">names</span><span class="p">(</span><span class="n">plant_nodes</span><span class="p">[[</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">cat</span><span class="p">(</span><span class="n">column_names</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_display_data">
-
-
-<pre>
-COMMON BOTANICAL ZONE LIGHT PRICE AVAILABILITY
-</pre>
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Given a column name, we create a data frame column containing the column values:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[11]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">common_tag</span> <span class="o">=</span> <span class="n">column_names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">get_value</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">plant_node</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span> <span class="n">xmlValue</span><span class="p">(</span><span class="n">plant_node</span><span class="p">[[</span><span class="n">tag</span><span class="p">]])</span>
-    
-<span class="n">common_column</span> <span class="o">=</span> <span class="n">sapply</span><span class="p">(</span><span class="n">plant_nodes</span><span class="p">,</span> <span class="n">get_value</span><span class="p">,</span> <span class="n">common_tag</span><span class="p">)</span>
-    
-<span class="n">cat</span><span class="p">(</span><span class="n">common_column</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_display_data">
-
-
-<pre>
-Bloodroot Columbine Marsh Marigold Cowslip Dutchman&apos;s-Breeches Ginger, Wild Hepatica Liverleaf Jack-In-The-Pulpit Mayapple Phlox, Woodland Phlox, Blue Spring-Beauty Trillium Wake Robin Violet, Dog-Tooth Trout Lily Adder&apos;s-Tongue Anemone Grecian Windflower Bee Balm Bergamot Black-Eyed Susan Buttercup Crowfoot Butterfly Weed Cinquefoil Primrose Gentian Blue Gentian Jacob&apos;s Ladder Greek Valerian California Poppy Shooting Star Snakeroot Cardinal Flower
-</pre>
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We package the code above into a function that creates the data frame column corresponding from a tag name and a list of plant nodes:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[12]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">get_column</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">plants</span><span class="p">)</span> <span class="n">sapply</span><span class="p">(</span><span class="n">plants</span><span class="p">,</span> <span class="n">get_value</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
-    
-<span class="n">cat</span><span class="p">((</span><span class="n">get_column</span><span class="p">(</span><span class="s">&#39;COMMON&#39;</span><span class="p">,</span> <span class="n">plant_nodes</span><span class="p">)))</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_display_data">
-
-
-<pre>
-Bloodroot Columbine Marsh Marigold Cowslip Dutchman&apos;s-Breeches Ginger, Wild Hepatica Liverleaf Jack-In-The-Pulpit Mayapple Phlox, Woodland Phlox, Blue Spring-Beauty Trillium Wake Robin Violet, Dog-Tooth Trout Lily Adder&apos;s-Tongue Anemone Grecian Windflower Bee Balm Bergamot Black-Eyed Susan Buttercup Crowfoot Butterfly Weed Cinquefoil Primrose Gentian Blue Gentian Jacob&apos;s Ladder Greek Valerian California Poppy Shooting Star Snakeroot Cardinal Flower
-</pre>
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We are now ready to retrieve all the columns of our data frame into a list of vectors, which we will use to construct our data frame:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[13]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">lapply</span><span class="p">(</span><span class="n">column_names</span><span class="p">,</span> <span class="n">get_column</span><span class="p">,</span> <span class="n">plant_nodes</span><span class="p">)</span>
-
-<span class="n">plant_df</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">head</span><span class="p">(</span><span class="n">plant_df</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_display_data">
-
-
-<pre>
-               COMMON              BOTANICAL ZONE        LIGHT PRICE
-1           Bloodroot Sanguinaria canadensis    4 Mostly Shady $2.44
-2           Columbine   Aquilegia canadensis    3 Mostly Shady $9.37
-3      Marsh Marigold       Caltha palustris    4 Mostly Sunny $6.81
-4             Cowslip       Caltha palustris    4 Mostly Shady $9.90
-5 Dutchman&apos;s-Breeches    Dicentra cucullaria    3 Mostly Shady $6.44
-6        Ginger, Wild       Asarum canadense    3 Mostly Shady $9.03
-  AVAILABILITY
-1       031599
-2       030699
-3       051799
-4       030699
-5       012099
-6       041899
-
-</pre>
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Using the data frame we just created, we save the plant data into a csv file into the raw data directory:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[14]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="n">plant_df</span><span class="p">,</span> <span class="s">&#39;./data/raw/plants_to_be_cleaned.csv&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">!</span>head ./data/raw/plants_to_be_cleaned.csv
-</pre></div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Packaging-the-gathering-code-into-reusable-functions">Packaging the gathering code into reusable functions<a class="anchor-link" href="#Packaging-the-gathering-code-into-reusable-functions">&#182;</a></h3>
-</div>
-
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[15]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">file</span> <span class="o">./</span><span class="n">script</span><span class="o">/</span><span class="n">plant_df</span><span class="o">-</span><span class="n">R</span>
-
-<span class="n">get_value</span>  <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">plant_node</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span> <span class="n">xmlValue</span><span class="p">(</span><span class="n">plant_node</span><span class="p">[[</span><span class="n">tag</span><span class="p">]])</span>
-    
-<span class="n">get_column</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">plants</span><span class="p">)</span> <span class="n">sapply</span><span class="p">(</span><span class="n">plants</span><span class="p">,</span> <span class="n">get_value</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span>
-    
-<span class="n">create_df_from_plant_xml</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">plant_file</span><span class="p">){</span>
-    <span class="n">require</span><span class="p">(</span><span class="n">XML</span><span class="p">)</span>
-    <span class="n">xml_doc</span>      <span class="o">=</span> <span class="n">xmlParse</span><span class="p">(</span><span class="n">plant_file</span><span class="p">)</span>
-    <span class="n">root_node</span>    <span class="o">=</span> <span class="n">xmlRoot</span><span class="p">(</span><span class="n">xml_doc</span><span class="p">)</span>
-    <span class="n">plant_nodes</span>  <span class="o">=</span> <span class="n">xmlChildren</span><span class="p">(</span><span class="n">root_node</span><span class="p">)</span>
-    <span class="n">column_names</span> <span class="o">=</span> <span class="n">names</span><span class="p">(</span><span class="n">plant_nodes</span><span class="p">[[</span><span class="mi">1</span><span class="p">]])</span>
-
-    <span class="n">data</span>     <span class="o">=</span> <span class="n">lapply</span><span class="p">(</span><span class="n">column_names</span><span class="p">,</span> <span class="n">get_column</span><span class="p">,</span> <span class="n">plant_nodes</span><span class="p">)</span>
-    <span class="k">return</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">))</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-Writing ./script/plant_df-R
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, our function converting a raw plant XML file into a R data frame can be used in other notebooks, using the <code>source</code> command:</p>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[16]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="n">source</span><span class="p">(</span><span class="s">&#39;./script/plant_df-R&#39;</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="n">head</span><span class="p">(</span><span class="n">create_df_from_plant_xml</span><span class="p">(</span><span class="n">plant_file</span><span class="p">)))</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_display_data">
-
-
-<pre>
-               COMMON              BOTANICAL ZONE        LIGHT PRICE
-1           Bloodroot Sanguinaria canadensis    4 Mostly Shady $2.44
-2           Columbine   Aquilegia canadensis    3 Mostly Shady $9.37
-3      Marsh Marigold       Caltha palustris    4 Mostly Sunny $6.81
-4             Cowslip       Caltha palustris    4 Mostly Shady $9.90
-5 Dutchman&apos;s-Breeches    Dicentra cucullaria    3 Mostly Shady $6.44
-6        Ginger, Wild       Asarum canadense    3 Mostly Shady $9.03
-  AVAILABILITY
-1       031599
-2       030699
-3       051799
-4       030699
-5       012099
-6       041899
-
-</pre>
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb">
-</pre></div>
-
-</div>
-</div>
-
 </div></p>
             </div>
             <!-- /.entry-content -->

@@ -1720,7 +1720,7 @@ init_mathjax();
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Data Analysis"/>
             <meta property="og:url" content="https://rkawauchi.github.io/SmartGoal/nb3.html"/>
-            <meta property="og:description" content="Team member responsible for this notebook: Rie Kawauchi: Visualized the data and analyzed how to present the best fund-raising duration and logit model to predict the probability of reaching the fund-raising goals In [2]: %load_ext rmagic Data Analysis¶ In [3]: %%R load("./data/cleaned/indiegogo.rda") In [4]: %%R # decide ..."/>
+            <meta property="og:description" content="SUMARRY: The cleaned data is analyzed using statistical tools and concepts. The analysis were run over projects' industry categories, fundraising durations and target fundraising amounts to fine turn the best duration advice function and probability model. The best duration function is to provide the best fundraising duration given the industry ..."/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://rkawauchi.github.io/SmartGoal/theme/css/bootstrap.min.css" type="text/css"/>
@@ -1815,15 +1815,19 @@ SmartGoal            </a>
                 </div>
                 <p>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="team-member-responsible-for-this-notebook">Team member responsible for this notebook:</h2>
-<ul>
-<li><strong>Rie Kawauchi</strong>: Visualized the data and analyzed how to present the best fund-raising duration and logit model to predict the probability of reaching the fund-raising goals</li>
-</ul>
+<p><strong>SUMARRY:</strong> The cleaned data is analyzed using statistical tools and concepts. The analysis were run over projects' industry categories, fundraising durations and target fundraising amounts to fine turn the best duration advice function and probability model. The best duration function is to provide the best fundraising duration given the industry category and the target fundraising amount, to aid potential fundraisers, and the probability model is the how likely a potential fundraising campaign can reach a target fundraising amount. We first explore the data analysis, and introduce the best duration and probability models.</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="I.-Data-Analysis">I. Data Analysis<a class="anchor-link" href="#I.-Data-Analysis">&#182;</a></h1>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The data is further simplified to develope a best duration model and logit predictive model.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[2]:
+In&nbsp;[1]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%</span><span class="k">load_ext</span> <span class="n">rmagic</span>
@@ -1834,13 +1838,12 @@ In&nbsp;[2]:
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Analysis">Data Analysis<a class="anchor-link" href="#Data-Analysis">&#182;</a></h1>
+<p>The cleaned data is stored in /data/cleaned folder and loaded for the analysis.</p>
 </div>
-
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[3]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -1851,14 +1854,21 @@ In&nbsp;[3]:
 </div>
 
 </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-Fundraising-Industry-Category">1. Fundraising Industry Category<a class="anchor-link" href="#1.-Fundraising-Industry-Category">&#182;</a></h2>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Each variable (industry category, durations, target amount) is first analyzed to make data visualization for duration and success probability models. Per below function, we know that there are 24 industry categories starting Film being the most frequent fundraising campaigne industry, and Community, Music etc follow. A very quick graph is shown to visualize the frequency differences.</p>
+</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[4]:
+In&nbsp;[3]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="c"># decide which cut-off of category</span>
+<span class="c"># visualization of industry category</span>
 <span class="n">catAnalysis</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">data</span><span class="p">){</span>
   <span class="n">indTable</span> <span class="o">=</span> <span class="n">table</span><span class="p">(</span><span class="n">data</span><span class="p">[,</span><span class="mi">2</span><span class="p">])</span>
   <span class="n">indTable</span> <span class="o">=</span> <span class="n">indTable</span><span class="p">[</span><span class="n">order</span><span class="p">(</span><span class="o">-</span><span class="n">indTable</span><span class="p">)]</span>
@@ -2126,10 +2136,13 @@ H7rrA7vn6XfVAAAAAElFTkSuQmCC
 </div>
 
 </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then the factorized industry categories are put into a table to give a summary of each industry. This is to get a holistic idea of the data.</p>
+</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[5]:
+In&nbsp;[4]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -2190,10 +2203,17 @@ In&nbsp;[5]:
 </div>
 
 </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.-Fundrasing-Duration">2. Fundrasing Duration<a class="anchor-link" href="#2.-Fundrasing-Duration">&#182;</a></h2>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To see the big picture of how the fundrasing duration is distributed, function below is run to visualize the distribution of durations picked by the fundraisers. Per graphs, we conclude that we focus on the fundraising durations that are 30, 40, 45, 60 days.</p>
+</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[6]:
+In&nbsp;[5]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
@@ -2723,14 +2743,21 @@ AAAAAElFTkSuQmCC
 </div>
 
 </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3.-Fundraising-Target-Amount">3. Fundraising Target Amount<a class="anchor-link" href="#3.-Fundraising-Target-Amount">&#182;</a></h2>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To visualize the distribution, compare inbetween the industries, and understand the outliers of the money actually raised in Indiegogo.com campaign, we made boxplots per industry.</p>
+</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[7]:
+In&nbsp;[6]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="c"># comparison between industry&#39;s raised_amount (took log)</span>
+<span class="c"># comparison between industry&#39;s raised_amount (logalized)</span>
 <span class="n">boxPlot</span> <span class="o">=</span> <span class="n">function</span><span class="p">(){</span>
   <span class="n">category</span> <span class="o">=</span> <span class="n">data</span><span class="p">[,</span><span class="mi">2</span><span class="p">]</span>
   <span class="n">indNames</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">names</span><span class="p">(</span><span class="n">catTable</span><span class="p">)</span>
@@ -3350,19 +3377,56 @@ AElFTkSuQmCC
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Best-Fund-Raising-Campaigne-Duration">Best Fund-Raising Campaigne Duration<a class="anchor-link" href="#Best-Fund-Raising-Campaigne-Duration">&#182;</a></h1>
+<h1 id="II.-Prediction-Model">II. Prediction Model<a class="anchor-link" href="#II.-Prediction-Model">&#182;</a></h1>
 </div>
 
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-Best-Fundraising-Campaigne-Duration">1. Best Fundraising Campaigne Duration<a class="anchor-link" href="#1.-Best-Fundraising-Campaigne-Duration">&#182;</a></h2>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After analyzing the data, the model to advice the best duration given the industry category, and the target amount, which was grouped in to 8 per analysis above:</p>
+</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
 In&nbsp;[8]:
 </div>
 <div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="c">############### Best Duration Advise ############</span>
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># industry category to choose from:</span>
 
-<span class="n">bestDuration</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">index</span><span class="p">){</span>
+<span class="c"># [1] &quot;Film&quot;           &quot;Community&quot;      &quot;Music&quot;          &quot;Education&quot;     </span>
+<span class="c"># [5] &quot;Health&quot;         &quot;Small Business&quot; &quot;Technology&quot;     &quot;Theater&quot;       </span>
+<span class="c"># [9] &quot;Art&quot;            &quot;Sports&quot;         &quot;Writing&quot;        &quot;Animals&quot;       </span>
+<span class="c"># [13] &quot;Video / Web&quot;    &quot;Food&quot;           &quot;Environment&quot;    &quot;Religion&quot;      </span>
+<span class="c"># [17] &quot;Dance&quot;          &quot;Gaming&quot;         &quot;Fashion&quot;        &quot;Photography&quot;   </span>
+<span class="c"># [21] &quot;Design&quot;         &quot;Politics&quot;       &quot;Comic&quot;          &quot;Transmedia&quot;</span>
+
+<span class="c"># target fundraising amount to choose from (column number):</span>
+
+<span class="c">#      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]   [,8]</span>
+<span class="c"># [1,]    0  5000 10000 20000 30000 40000 50000  100000</span>
+<span class="c"># [2,] 5000 10000 20000 30000 40000 50000 100000 400000</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The model takes the industry category and the target amount index, and return the best and most-picked durations to advice the potential website users.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[9]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="c"># The Model:</span>
+
+<span class="n">bestDuration</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">index</span><span class="p">){</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
   <span class="n">amountMat</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
   <span class="n">amountMat</span><span class="p">[</span><span class="mi">1</span><span class="p">,]</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5000</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">,</span><span class="mi">30000</span><span class="p">,</span><span class="mi">40000</span><span class="p">,</span><span class="mi">50000</span><span class="p">,</span><span class="mi">100000</span><span class="p">)</span>
   <span class="n">amountMat</span><span class="p">[</span><span class="mi">2</span><span class="p">,]</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">,</span><span class="mi">30000</span><span class="p">,</span><span class="mi">40000</span><span class="p">,</span><span class="mi">50000</span><span class="p">,</span><span class="mi">100000</span><span class="p">,</span><span class="mi">400000</span><span class="p">)</span>
@@ -3403,24 +3467,13 @@ In&nbsp;[8]:
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[9]:
+In&nbsp;[12]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="k">print</span><span class="p">(</span><span class="n">bestDuration</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="s">&quot;Film&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="c"># Demonstration of running the model:</span>
 
-<span class="c"># category to choose:</span>
-<span class="c"># [1] &quot;Film&quot;           &quot;Community&quot;      &quot;Music&quot;          &quot;Education&quot;     </span>
-<span class="c"># [5] &quot;Health&quot;         &quot;Small Business&quot; &quot;Technology&quot;     &quot;Theater&quot;       </span>
-<span class="c"># [9] &quot;Art&quot;            &quot;Sports&quot;         &quot;Writing&quot;        &quot;Animals&quot;       </span>
-<span class="c"># [13] &quot;Video / Web&quot;    &quot;Food&quot;           &quot;Environment&quot;    &quot;Religion&quot;      </span>
-<span class="c"># [17] &quot;Dance&quot;          &quot;Gaming&quot;         &quot;Fashion&quot;        &quot;Photography&quot;   </span>
-<span class="c"># [21] &quot;Design&quot;         &quot;Politics&quot;       &quot;Comic&quot;          &quot;Transmedia&quot;</span>
-
-<span class="c"># target fund-raising amount to choose (column number):</span>
-<span class="c">#      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]   [,8]</span>
-<span class="c"># [1,]    0  5000 10000 20000 30000 40000 50000  100000</span>
-<span class="c"># [2,] 5000 10000 20000 30000 40000 50000 100000 400000</span>
+<span class="k">print</span><span class="p">(</span><span class="n">bestDuration</span><span class="p">(</span><span class="s">&quot;Film&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -3782,21 +3835,357 @@ AElFTkSuQmCC
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Predictive-Analysis-for-Probability-of-Reaching-the-Funding-Goal">Predictive Analysis for Probability of Reaching the Funding Goal<a class="anchor-link" href="#Predictive-Analysis-for-Probability-of-Reaching-the-Funding-Goal">&#182;</a></h1>
+<h1 id="2.-Probability-of-Reaching-the-Fundraising-Goal:-Logit-Regression">2. Probability of Reaching the Fundraising Goal: Logit Regression<a class="anchor-link" href="#2.-Probability-of-Reaching-the-Fundraising-Goal:-Logit-Regression">&#182;</a></h1>
 </div>
 
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We converted the original data into a binary design matrix, and estimated the coefficients of industry categories, target fundrasing amounts and durations using <strong>Logit Regression</strong>.</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.1-Binary-Design-Matrix-Construction">2.1 Binary Design Matrix Construction<a class="anchor-link" href="#2.1-Binary-Design-Matrix-Construction">&#182;</a></h3>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We use:</p>
+<ul>
+<li><strong>Intercept</strong>: 1</li>
+<li><strong>Category</strong>: 24 industries</li>
+<li><strong>Target Amount</strong>: 9 grouped amount brackets</li>
+<li><strong>Duration</strong>: 6 groups of duration selections</li>
+<li><strong>Y</strong>: 1 column of response variable; 1 = 100% reached the target amount, 0 otherwise</li>
+</ul>
+<p>and the total of 41 columns all in 0 and 1.</p>
+<p>To make the binary matrix depending on the original data, the original data is put in cbind to the design matrix.</p>
+</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[17]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
-<span class="c">### UNDER CONSTRUCTION ##</span>
-<span class="c"># turn the data into binary and fit to logit model:</span>
-<span class="n">nll</span> <span class="o">&lt;-</span> <span class="n">function</span><span class="p">(</span><span class="n">beta</span><span class="p">){</span>
-  <span class="n">beta</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span> <span class="n">ncol</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nrow</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span>
-  <span class="k">return</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="o">-</span><span class="nb">sum</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">exp</span><span class="p">(</span><span class="n">dX</span> <span class="o">%*%</span> <span class="n">beta</span><span class="p">)))</span><span class="o">+</span> <span class="nb">sum</span><span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">%*%</span> <span class="p">(</span><span class="n">dX</span> <span class="o">%*%</span> <span class="n">beta</span><span class="p">))))</span>
+<span class="c"># Make Logit model base matrix</span>
+
+<span class="n">nRow</span> <span class="o">=</span> <span class="mi">8584</span>
+<span class="n">nTotal</span> <span class="o">=</span> <span class="mi">41</span> <span class="c"># </span>
+
+<span class="n">baseX</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">matrix</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nRow</span><span class="p">,</span> <span class="n">nTotal</span><span class="p">))</span>
+<span class="n">baseX</span><span class="p">[,</span><span class="mi">7</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">colnames</span><span class="p">(</span><span class="n">baseX</span><span class="p">)</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s">&#39;location&#39;</span><span class="p">,</span><span class="s">&#39;category&#39;</span><span class="p">,</span><span class="s">&#39;duration&#39;</span><span class="p">,</span><span class="s">&#39;amount_raised&#39;</span><span class="p">,</span><span class="s">&#39;amount_goal&#39;</span><span class="p">,</span><span class="s">&#39;percent&#39;</span><span class="p">,</span>
+                    <span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="n">rownames</span><span class="p">(</span><span class="n">catTable</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">24</span><span class="p">,]),</span><span class="s">&quot;&lt;5K&quot;</span><span class="p">,</span><span class="s">&quot;&lt;10K&quot;</span><span class="p">,</span><span class="s">&quot;&lt;20K&quot;</span><span class="p">,</span><span class="s">&quot;&lt;30K&quot;</span><span class="p">,</span><span class="s">&quot;&lt;40K&quot;</span><span class="p">,</span><span class="s">&quot;&lt;50K&quot;</span><span class="p">,</span><span class="s">&quot;&lt;100K&quot;</span><span class="p">,</span><span class="s">&quot;&lt;400K&quot;</span><span class="p">,</span><span class="s">&quot;&gt;400K&quot;</span><span class="p">,</span>
+                    <span class="s">&quot;&lt;30d&quot;</span><span class="p">,</span><span class="s">&quot;30d&quot;</span><span class="p">,</span><span class="s">&quot;40d&quot;</span><span class="p">,</span><span class="s">&quot;45d&quot;</span><span class="p">,</span><span class="s">&quot;60d&quot;</span><span class="p">,</span><span class="s">&quot;&gt;60d&quot;</span><span class="p">,</span><span class="s">&quot;Y&quot;</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">colnames</span><span class="p">(</span><span class="n">baseX</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<pre>
+ [1] &quot;location&quot;       &quot;category&quot;       &quot;duration&quot;       &quot;amount_raised&quot; 
+ [5] &quot;amount_goal&quot;    &quot;percent&quot;        &quot;a&quot;              &quot;Film&quot;          
+ [9] &quot;Community&quot;      &quot;Music&quot;          &quot;Education&quot;      &quot;Technology&quot;    
+[13] &quot;Health&quot;         &quot;Small Business&quot; &quot;Theater&quot;        &quot;Art&quot;           
+[17] &quot;Writing&quot;        &quot;Video / Web&quot;    &quot;Gaming&quot;         &quot;Animals&quot;       
+[21] &quot;Sports&quot;         &quot;Food&quot;           &quot;Environment&quot;    &quot;Design&quot;        
+[25] &quot;Fashion&quot;        &quot;Photography&quot;    &quot;Dance&quot;          &quot;Comic&quot;         
+[29] &quot;Religion&quot;       &quot;Politics&quot;       &quot;Transmedia&quot;     &quot;&lt;5K&quot;           
+[33] &quot;&lt;10K&quot;           &quot;&lt;20K&quot;           &quot;&lt;30K&quot;           &quot;&lt;40K&quot;          
+[37] &quot;&lt;50K&quot;           &quot;&lt;100K&quot;          &quot;&lt;400K&quot;          &quot;&gt;400K&quot;         
+[41] &quot;&lt;30d&quot;           &quot;30d&quot;            &quot;40d&quot;            &quot;45d&quot;           
+[45] &quot;60d&quot;            &quot;&gt;60d&quot;           &quot;Y&quot;             
+
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Change the categorical input into binary, and make the appropriate column 1 :</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[18]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="c"># convert industry into binary</span>
+
+<span class="n">catChange</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">baseX</span><span class="p">){</span>
+  <span class="n">names</span> <span class="o">=</span> <span class="n">rownames</span><span class="p">(</span><span class="n">catTable</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">24</span><span class="p">,])</span>
+  <span class="n">category</span> <span class="o">=</span> <span class="n">baseX</span><span class="p">[,</span><span class="mi">2</span><span class="p">]</span>
+  <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="mi">24</span><span class="p">){</span>
+    <span class="n">baseX</span><span class="p">[</span><span class="n">category</span> <span class="o">==</span> <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">i</span><span class="o">+</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="p">}</span>
+  <span class="k">return</span><span class="p">(</span><span class="n">baseX</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">baseX</span> <span class="o">=</span> <span class="n">catChange</span><span class="p">(</span><span class="n">baseX</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[19]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="c"># convert target amount category into binary</span>
+
+<span class="n">targetChange</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">baseX</span><span class="p">){</span>
+  <span class="n">targetList</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5000</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">20000</span><span class="p">,</span><span class="mi">30000</span><span class="p">,</span><span class="mi">40000</span><span class="p">,</span><span class="mi">50000</span><span class="p">,</span><span class="mi">100000</span><span class="p">,</span><span class="mi">400000</span><span class="p">,</span><span class="mi">10000000000000</span><span class="p">)</span>
+  <span class="n">target</span> <span class="o">=</span> <span class="n">baseX</span><span class="p">[,</span><span class="mi">5</span><span class="p">]</span>
+  <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">){</span>
+    <span class="n">baseX</span><span class="p">[</span><span class="n">target</span><span class="o">&gt;</span><span class="n">targetList</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">target</span><span class="o">&lt;=</span><span class="n">targetList</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">i</span><span class="o">+</span><span class="mi">31</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="p">}</span>
+  <span class="k">return</span><span class="p">(</span><span class="n">baseX</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">baseX</span> <span class="o">=</span> <span class="n">targetChange</span><span class="p">(</span><span class="n">baseX</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[20]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="c"># convert duration category into binay</span>
+
+<span class="n">durationChange</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">baseX</span><span class="p">){</span>
+  <span class="n">durationList</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">61</span><span class="p">)</span>
+  <span class="n">duration</span> <span class="o">=</span> <span class="n">baseX</span><span class="p">[,</span><span class="mi">3</span><span class="p">]</span>
+  <span class="n">baseX</span><span class="p">[</span><span class="n">duration</span><span class="o">&lt;</span><span class="mi">30</span><span class="p">,</span><span class="mi">41</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">baseX</span><span class="p">[</span><span class="n">duration</span><span class="o">&gt;</span><span class="mi">60</span><span class="p">,</span><span class="mi">46</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="k">for</span><span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">){</span>
+    <span class="n">baseX</span><span class="p">[</span><span class="n">duration</span><span class="o">&gt;=</span><span class="n">durationList</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&amp;</span> <span class="n">duration</span><span class="o">&lt;</span><span class="n">durationList</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">i</span><span class="o">+</span><span class="mi">41</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="p">}</span>
+  <span class="k">return</span><span class="p">(</span><span class="n">baseX</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">baseX</span> <span class="o">=</span> <span class="n">durationChange</span><span class="p">(</span><span class="n">baseX</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[21]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="c"># create Y per % of target amount reached per campain</span>
+<span class="c"># 1 = 100% reached, 0 otherwise</span>
+
+<span class="n">yChange</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">baseX</span><span class="p">){</span>
+  <span class="n">percent</span> <span class="o">=</span> <span class="n">baseX</span><span class="p">[,</span><span class="mi">6</span><span class="p">]</span>
+  <span class="n">baseX</span><span class="p">[</span><span class="n">percent</span><span class="o">&gt;=</span><span class="mi">100</span><span class="p">,</span><span class="mi">47</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="k">return</span><span class="p">(</span><span class="n">baseX</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">baseX</span> <span class="o">=</span> <span class="n">yChange</span><span class="p">(</span><span class="n">baseX</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As an example, a campaign in New York is shown: It is in Art industry which raised 85% of its target amount of US1,500 for the duration setting of 37 days. This data is converted to a row with the category 'Art' column, the target '&lt;</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[27]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="k">print</span><span class="p">(</span><span class="n">baseX</span><span class="p">[</span><span class="mi">5500</span><span class="p">,])</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<pre>
+                              location category duration amount_raised
+5500 Purchase, New York, United States      Art       37          1275
+     amount_goal percent a Film Community Music Education Technology Health
+5500        1500      85 1    0         0     0         0          0      0
+     Small Business Theater Art Writing Video / Web Gaming Animals Sports Food
+5500              0       0   1       0           0      0       0      0    0
+     Environment Design Fashion Photography Dance Comic Religion Politics
+5500           0      0       0           0     0     0        0        0
+     Transmedia &lt;5K &lt;10K &lt;20K &lt;30K &lt;40K &lt;50K &lt;100K &lt;400K &gt;400K &lt;30d 30d 40d 45d
+5500          0   1    0    0    0    0    0     0     0     0    0   1   0   0
+     60d &gt;60d Y
+5500   0    0 0
+
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then the design matrix and response Y are fit using the <strong><em>logit regression</em></strong>:</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[28]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="c"># data needs to be dataframed</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">baseX</span><span class="p">[,</span><span class="mi">8</span><span class="p">:</span><span class="mi">46</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">baseX</span><span class="p">[,</span><span class="mi">47</span><span class="p">]</span>
+
+<span class="n">dataLogit</span> <span class="o">=</span> <span class="n">cbind</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c"># Logit Regression</span>
+<span class="n">modelLogit</span> <span class="o">=</span> <span class="n">glm</span><span class="p">(</span><span class="n">Y</span> <span class="o">~</span> <span class="o">.</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">dataLogit</span><span class="p">,</span> <span class="n">family</span> <span class="o">=</span> <span class="s">&quot;binomial&quot;</span><span class="p">)</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="n">summary</span><span class="p">(</span><span class="n">modelLogit</span><span class="p">)</span><span class="err">$</span><span class="n">coef</span><span class="p">[,</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">beta</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<pre>
+     (Intercept)             Film        Community            Music 
+   -2.7360094294    -0.0100895741    -0.0261151541     0.0932471056 
+       Education       Technology           Health &#96;Small Business&#96; 
+   -0.2634446189     0.4542413374    -0.0370563188    -0.5842862836 
+         Theater              Art          Writing    &#96;Video / Web&#96; 
+    0.0287134266    -0.1396895084    -0.0170485624     0.1563392114 
+          Gaming          Animals           Sports             Food 
+    0.5063947858    -0.3116265724    -0.3262599551     0.0374058185 
+     Environment           Design          Fashion      Photography 
+   -0.1421087043     0.3883117472     0.0006955807     0.1193417339 
+           Dance            Comic         Religion         Politics 
+   -0.2338027729     0.6905753544    -0.4037869616     0.6250090707 
+           &#96;&lt;5K&#96;           &#96;&lt;10K&#96;           &#96;&lt;20K&#96;           &#96;&lt;30K&#96; 
+    2.9330723523     2.2607837341     2.0191768593     1.6527159067 
+          &#96;&lt;40K&#96;           &#96;&lt;50K&#96;          &#96;&lt;100K&#96;          &#96;&lt;400K&#96; 
+    1.4837071459     1.7436595199     1.3880936920     0.9682265112 
+          &#96;&lt;30d&#96;            &#96;30d&#96;            &#96;40d&#96;            &#96;45d&#96; 
+    0.0109125505    -0.0416389270    -0.1613095486    -0.4157736893 
+           &#96;60d&#96; 
+   -0.6786081986 
+
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using this estimated beta/coefficients, predictive functin is constructed for the <strong><em>success probability advice</em></strong>. The model takes the indexed group to indicate the target and duration desires.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[29]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c">#####################  logit model #####################</span>
+
+<span class="c"># Generalized Function use:</span>
+
+<span class="c"># category to choose from (Film = 1 ~ Comic = 23):</span>
+<span class="c"># [1] &quot;Film&quot;           &quot;Community&quot;      &quot;Music&quot;          &quot;Education&quot;     </span>
+<span class="c"># [5] &quot;Health&quot;         &quot;Small Business&quot; &quot;Technology&quot;     &quot;Theater&quot;       </span>
+<span class="c"># [9] &quot;Art&quot;            &quot;Sports&quot;         &quot;Writing&quot;        &quot;Animals&quot;       </span>
+<span class="c"># [13] &quot;Video / Web&quot;    &quot;Food&quot;           &quot;Environment&quot;    &quot;Religion&quot;      </span>
+<span class="c"># [17] &quot;Dance&quot;          &quot;Gaming&quot;         &quot;Fashion&quot;        &quot;Photography&quot;   </span>
+<span class="c"># [21] &quot;Design&quot;         &quot;Politics&quot;       &quot;Comic&quot;</span>
+
+<span class="c"># target fund-raising amount to choose from (column number):</span>
+<span class="c">#      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]   [,8]</span>
+<span class="c"># [1,]    0  5000 10000 20000 30000 40000 50000  100000</span>
+<span class="c"># [2,] 5000 10000 20000 30000 40000 50000 100000 400000</span>
+
+<span class="c"># fundraising campaign duration to choose from(column number):</span>
+<span class="c">#       [,1] [,2] [,3] [,4] [,5]</span>
+<span class="c"># [1,]  &lt;30   30   40   45   60 </span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[32]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="c"># The model</span>
+
+<span class="n">predict</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">cat</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">duration</span><span class="p">){</span>
+  <span class="n">predicX</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">rep</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">36</span><span class="p">))</span>
+  <span class="n">catName</span> <span class="o">=</span> <span class="n">catName</span> <span class="c"># 1:24</span>
+  <span class="n">beta</span> <span class="o">=</span> <span class="n">beta</span>
+  <span class="c"># assign industry category</span>
+  <span class="n">catN</span> <span class="o">=</span> <span class="n">match</span><span class="p">(</span><span class="n">cat</span><span class="p">,</span><span class="n">catName</span><span class="p">)</span> <span class="o">+</span><span class="mi">1</span>
+  <span class="n">predicX</span><span class="p">[</span><span class="n">catN</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+  <span class="c"># assign target amount</span>
+  <span class="n">targetN</span> <span class="o">=</span> <span class="n">target</span> <span class="o">+</span> <span class="mi">24</span>
+  <span class="n">predicX</span><span class="p">[</span><span class="n">targetN</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="c"># assign duration</span>
+  <span class="n">durationN</span> <span class="o">=</span> <span class="n">duration</span> <span class="o">+</span> <span class="mi">32</span>
+  <span class="n">predicX</span><span class="p">[</span><span class="n">durationN</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">predicY</span> <span class="o">=</span> <span class="n">predicX</span> <span class="o">%*%</span> <span class="n">beta</span>
+  <span class="n">successP</span> <span class="o">=</span> <span class="n">plogis</span><span class="p">(</span><span class="n">predicY</span><span class="p">)</span>
+  <span class="k">return</span><span class="p">(</span><span class="n">successP</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -3805,13 +4194,47 @@ In&nbsp;[]:
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this notebook, you'll perform the actual analysis of the data stored in the directory</p>
-<pre><code>./data/cleaned</code></pre>
-<p>If the data is not ready yet (e.g. the other members of the team in charge of cleaning the data are not done yet), you may want to simulate cleaned data in the form you want them to be in order to perform the analysis. This may also help you data cleaning team to come up with the rigth data frame. If you choose to do so, store your simulated data into the directory</p>
-<pre><code>./data/simulated</code></pre>
-<p>Having performed analysis of simulated data may help you with the analysis of the actual data, since you will be able to notice deviations between the real and simulated data, which may be worth explaining and investigating further.</p>
-<p>The graphics your going to produce as a result of your analysis should be store in the directory:</p>
-<pre><code>./visualization</code></pre>
+<p>The model predicts the <strong><em>probability of a success for the fundrasing campaign in Technology industry, targeting to raise somewhere US5,000 with a duration selection of 30 days as about 65%</em></strong>:</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[33]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="k">print</span><span class="p">(</span> <span class="n">predict</span><span class="p">(</span><span class="s">&#39;Technology&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+
+<pre>
+          [,1]
+[1,] 0.6478645
+
+</pre>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="team-member-responsible-for-this-notebook">Team member responsible for this notebook:</h2>
+<ul>
+<li><strong>Rie Kawauchi</strong>: Analyzed and visualized the holistic data structure, and developed Best Duration and Success Probability models</li>
+</ul>
 </div></p>
             </div>
             <!-- /.entry-content -->

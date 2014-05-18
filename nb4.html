@@ -1720,7 +1720,7 @@ init_mathjax();
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Project Report"/>
             <meta property="og:url" content="https://rkawauchi.github.io/SmartGoal/nb4.html"/>
-            <meta property="og:description" content="Team members responsible for this notebook: Rie Kawauchi: summarized the main purpose of the project Po Jui Chiu: listed the action plans how we can achieve reach the goal SmartGoal¶ Need funds? SmartGoal helps your fund-raising campaign reach the goal.¶ In [5]: from IPython.display import Image Image(filename='./picture ..."/>
+            <meta property="og:description" content="SmartGoal: Need funds? SmartGoal helps your fundraising campaign reach the goal.¶ In [5]: from IPython.display import Image Image(filename='./picture/logo.png') Out[5]:"/>
 
     <!-- Bootstrap -->
         <link rel="stylesheet" href="https://rkawauchi.github.io/SmartGoal/theme/css/bootstrap.min.css" type="text/css"/>
@@ -1815,18 +1815,7 @@ SmartGoal            </a>
                 </div>
                 <p>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="team-members-responsible-for-this-notebook">Team members responsible for this notebook:</h2>
-<ul>
-<li><strong>Rie Kawauchi</strong>: summarized the main purpose of the project</li>
-<li><strong>Po Jui Chiu</strong>: listed the action plans how we can achieve reach the goal</li>
-</ul>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="SmartGoal">SmartGoal<a class="anchor-link" href="#SmartGoal">&#182;</a></h1>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Need-funds?-SmartGoal-helps-your-fund-raising-campaign-reach-the-goal.">Need funds? SmartGoal helps your fund-raising campaign reach the goal.<a class="anchor-link" href="#Need-funds?-SmartGoal-helps-your-fund-raising-campaign-reach-the-goal.">&#182;</a></h2>
+<h2 id="SmartGoal:-Need-funds?-SmartGoal-helps-your-fundraising-campaign-reach-the-goal.">SmartGoal: Need funds? SmartGoal helps your fundraising campaign reach the goal.<a class="anchor-link" href="#SmartGoal:-Need-funds?-SmartGoal-helps-your-fundraising-campaign-reach-the-goal.">&#182;</a></h2>
 </div>
 
 <div class="cell border-box-sizing code_cell vbox">
@@ -1995,14 +1984,14 @@ EH//2Q==
 
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Motivation:">Motivation:<a class="anchor-link" href="#Motivation:">&#182;</a></h2>
+<h1 id="Motivation:">Motivation:<a class="anchor-link" href="#Motivation:">&#182;</a></h1>
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Are you <strong>raising funds</strong> for your innovative ideas to develop a products?</p>
-<p>Are you <strong>raising funds</strong> for your daughter's soccer team's camping?</p>
-<p>Inspired by the crowdfunding website, Indiegogo.com, we are interested in finding the best duration of the fund-raising campaings and correlation between the duration, industry the projects are in, and the fund-raising goals.</p>
-<p><strong>The motivation:</strong> UC Berkeley is fortunate to have many successful entrepreneurs and innovative ideas that, data analysis of how innovative projects can maximize their fundraising goals can contribute to the Berkeley academic society, outside of the class project.</p>
+<p>Are you <strong>raising funds</strong> for your innovative ideas to develop new products?</p>
+<p>Are you <strong>raising funds</strong> for your daughter's soccer team's camping trip?</p>
+<p>Inspired by the crowdfunding website, Indiegogo.com, we are interested in finding the best duration of the fundraising campaings and predicting how likey a potential fundraising campaign reach its goal amount.</p>
+<p><strong>The motivation:</strong> UC Berkeley is fortunate to have many successful entrepreneurs and innovative ideas, and the data analysis of how innovative projects can maximize their fundraising goals can contribute to the Berkeley academic society, outside of the class project.</p>
 <p>Especially in this crowdfunding era, this analysis aims to excelerate the contribution of innovative ideas to the world.</p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -2010,26 +1999,121 @@ EH//2Q==
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>DRAFT DRAFT</p>
+<ul>
+<li><strong>Gather Data</strong>:Extract data from indiegogo.com website (Python)</li>
+<li><strong>Clean Data</strong>: Go through the data and remove anomalities, and adjust/convert the original data into appropriate formats (R)</li>
+<li><strong>Analyze Data</strong>: Analyze and visualize the trend of data, design the <strong>best duration</strong> and <strong>success probability</strong> models (R)</li>
+</ul>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this notebook, you'll sumarize your finding for the class presentation.</p>
-<p>The class presentation will use this notebook in slide mode, as I do during lecture time.</p>
-<p>You'll need to download the following <a href="https://github.com/fperez/nb-slideshow-template/archive/master.zip">zip file</a>, unzip it, and run the following notebook <code>install-support.ipynb</code> to install the slide capabilities.</p>
-<p>The notebook <code>notebook-slideshow-example.ipynb</code> will give you examples on how to use slides within the iPython notebook.</p>
-<p>You should also write this notebook so that you can convert it nicely into a pdf document using the commands</p>
-<pre><code>ipython nbconvert NB4_report.pynb --to latex
-pdflatex NB4_report.tex</code></pre>
-<p>See <a href="http://ipython.org/ipython-doc/rel-1.0.0/interactive/nbconvert.html">here</a> for further references on how to do that.</p>
-<p>In this notebook, you'll</p>
+<h1 id="Results:">Results:<a class="anchor-link" href="#Results:">&#182;</a></h1>
+</div>
+
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%</span><span class="k">load_ext</span> <span class="n">rmagic</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1.-The-Best-Duration-Model">1. The Best Duration Model<a class="anchor-link" href="#1.-The-Best-Duration-Model">&#182;</a></h2>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The user pick the category of the industry, and the target fundraising amount index depending on the actual amount, the model advices the best and most picked duration. The duration is important as the fundraisers are charged for the length of the fundrasing durations.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">R</span>
+<span class="n">source</span><span class="p">(</span><span class="s">&quot;./data/script/Indiegogo2.R&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+Error in file(filename, &quot;r&quot;, encoding = encoding) : 
+  cannot open the connection
+In addition: Warning message:
+In file(filename, &quot;r&quot;, encoding = encoding) :
+  cannot open file &apos;./data/script/Indiegogo2.R&apos;: No such file or directory
+Error in file(filename, &quot;r&quot;, encoding = encoding) : 
+  cannot open the connection
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c"># general function for given industry and target amount</span>
+
+<span class="c"># category to choose:</span>
+<span class="c"># [1] &quot;Film&quot;           &quot;Community&quot;      &quot;Music&quot;          &quot;Education&quot;     </span>
+<span class="c"># [5] &quot;Health&quot;         &quot;Small Business&quot; &quot;Technology&quot;     &quot;Theater&quot;       </span>
+<span class="c"># [9] &quot;Art&quot;            &quot;Sports&quot;         &quot;Writing&quot;        &quot;Animals&quot;       </span>
+<span class="c"># [13] &quot;Video / Web&quot;    &quot;Food&quot;           &quot;Environment&quot;    &quot;Religion&quot;      </span>
+<span class="c"># [17] &quot;Dance&quot;          &quot;Gaming&quot;         &quot;Fashion&quot;        &quot;Photography&quot;   </span>
+<span class="c"># [21] &quot;Design&quot;         &quot;Politics&quot;       &quot;Comic&quot;          &quot;Transmedia&quot;</span>
+
+<span class="c"># target fund-raising amount to choose (column number):</span>
+<span class="c">#      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]   [,8]</span>
+<span class="c"># [1,]    0  5000 10000 20000 30000 40000 50000  100000</span>
+<span class="c"># [2,] 5000 10000 20000 30000 40000 50000 100000 400000</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_pyerr">
+<pre>
+<span class="ansicyan">  File </span><span class="ansigreen">&quot;&lt;ipython-input-1-5214a5c5047a&gt;&quot;</span><span class="ansicyan">, line </span><span class="ansigreen">17</span>
+<span class="ansiyellow">    %%R --bg</span>
+<span class="ansigrey">    ^</span>
+<span class="ansired">SyntaxError</span><span class="ansired">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="team-members-responsible-for-this-notebook">Team members responsible for this notebook:</h2>
 <ul>
-<li><p>describe your problem as stated in the propectus</p></li>
-<li><p>comment on your data sources, on their format, on the difficulties to get them</p></li>
-<li><p>present the main challenge you encountered</p></li>
-<li><p>present your finding in the form of expresive graphics</p></li>
+<li><strong>Rie Kawauchi</strong>: summarized the main purpose and the results of the project * **</li>
 </ul>
-<p>Be sure to include an introduction section motivating your visualizations, with a description of the substantive context and why it is interesting.</p>
-<p>Cite the source of the data and any other references that you used in carrying out your project.</p>
 </div></p>
             </div>
             <!-- /.entry-content -->
