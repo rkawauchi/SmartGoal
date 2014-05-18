@@ -5,21 +5,12 @@
 &lt;/div&gt;
 
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Need funds? SmartGoal helps your fundraising campaign reach the goal. &lt;br /&gt; Ride the crowdfunding wave, and make your innovative ideas real. &lt;br /&gt; &lt;br /&gt; &lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Need funds? SmartGoal helps your fundraising campaign reach the goal. &lt;br /&gt; Ride the crowdfunding wave, and make your innovative ideas real.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[]:
-&lt;/div&gt;
-&lt;div class="input_area box-flex1"&gt;
-&lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="Motivation:"&gt;Motivation:&lt;a class="anchor-link" href="#Motivation:"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell vbox"&gt;
 &lt;div class="input hbox"&gt;
 &lt;div class="prompt input_prompt"&gt;
@@ -185,10 +176,6 @@ EH//2Q==
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Motivation:"&gt;Motivation:&lt;a class="anchor-link" href="#Motivation:"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
-&lt;/div&gt;
-
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Are you &lt;strong&gt;raising funds&lt;/strong&gt; for your innovative ideas to develop new products?&lt;/p&gt;
 &lt;p&gt;Are you &lt;strong&gt;raising funds&lt;/strong&gt; for your daughter's soccer team's camping trip?&lt;/p&gt;
